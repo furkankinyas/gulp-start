@@ -1,0 +1,137 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-padding;
+  padding-left: $container-padding;
+}
+
+.margin {
+  margin-bottom: -$gutter;
+
+  >* {
+    margin-bottom: $gutter;
+  }
+}
+
+.row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  margin-left: -$gutter-width;
+  margin-right: -$gutter-width;
+}
+
+.col-4,
+.col-6,
+.col-8,
+.col-12 {
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+}
+
+
+.col-4 {
+  width: (4*(100%/12));
+}
+
+.col-6 {
+  width: (6*(100%/12));
+}
+
+.col-8 {
+  width: (8*(100%/12));
+}
+
+.col-12 {
+  width: (12*(100%/12));
+}
+
+
+@if $responsive==true {
+  .container {
+    max-width: $container;
+  }
+
+  @media (max-width: $md) {
+    .col-mb-4 {
+      width: (4*(100%/12));
+    }
+
+    .col-mb-6 {
+      width: (6*(100%/12));
+    }
+
+    .col-mb-8 {
+      width: (8*(100%/12));
+    }
+
+    .col-mb-12 {
+      width: (12*(100%/12));
+    }
+  }
+}
+
+@if $responsive==false {
+  .container {
+    width: $container;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex: 0 1 auto;
+  align-items: flex-start;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.start {
+  text-align: start;
+  justify-content: flex-start;
+}
+
+.center {
+  align-items: center;
+}
+
+.end {
+  text-align: end;
+  justify-content: flex-end;
+}
+
+.top {
+  align-items: flex-start;
+}
+
+.middle {
+  align-items: center;
+}
+
+.bottom {
+  align-items: flex-end;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.around {
+  justify-content: space-around;
+}
+
+.auto {
+  flex: 1 auto;
+}
+
+.equal {
+  flex: 1 0;
+}

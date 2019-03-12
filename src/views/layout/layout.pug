@@ -1,0 +1,35 @@
+//- vars
+- var bodyClass = ''; 
+block vars
+
+//- layout.jade
+doctype html
+html
+  head
+    //- https://github.com/joshbuchea/HEAD
+    //- base(href="/") 
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    title Title 
+    meta(name="description" content="")    
+    link(rel="apple-touch-icon" href="apple-touch-icon.png")
+    link(rel="stylesheet", href="assets/css/main.css")
+    block css 
+
+  body(class=bodyClass)
+
+    //- content
+    div.shell
+      //- header
+      include ../partial/header.pug    
+      div.container
+        block content
+      //- footer
+      include ../partial/footer.pug
+
+    //- assets 
+    script(src="assets/js/min/scripts-min.js")
+    block js
+
+    

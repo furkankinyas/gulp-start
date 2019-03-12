@@ -1,0 +1,26 @@
+.popup-wrapper {
+  z-index: 12;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 60rem;
+}
+
+.popup-close {
+  right: 0;
+  top: -3rem;
+}
+
+.popup {
+  #popup {
+    &:checked {
+      ~.overlay {
+        display: none;
+      }
+
+      ~.popup-wrapper {
+        display: none;
+      }
+    }
+  }
+}

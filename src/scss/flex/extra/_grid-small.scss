@@ -1,0 +1,24 @@
+.row {
+  &.small {
+    margin-left: -$gutter-width-sm;
+    margin-right: -$gutter-width-sm;
+
+    .margin {
+      margin-bottom: -$gutter-sm;
+
+      >* {
+        margin-bottom: $gutter-sm;
+      }
+    }
+
+    .col-4,
+    .col-6,
+    .col-8,
+    .col-12 {
+      padding-left: $gutter-width-sm;
+      padding-right: $gutter-width-sm;
+    }
+
+  }
+
+}

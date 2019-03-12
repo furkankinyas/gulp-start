@@ -1,0 +1,14 @@
+.button {
+  background-color: $primary;
+  color: $white;
+  height: 3rem;
+  line-height: 3rem;
+  opacity: 1;
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: .8;
+    background-color: $primary;
+    color: $white
+  }
+}

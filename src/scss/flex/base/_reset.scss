@@ -1,0 +1,74 @@
+html {
+  font-size: 62.5%;
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-size: 1.4rem;
+  min-width: $container;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: normal;
+  font-size: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,::before,::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  display: block;
+}
+
+input[type="reset"],
+input[type="submit"],
+button,
+select {
+  -webkit-appearance: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+input,
+select,
+button {
+  outline: 0;
+}
+
+input {
+  border: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
