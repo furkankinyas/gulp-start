@@ -41,8 +41,8 @@ function sprite(){
         .pipe(spritesmith({
             imgName: 'sprite.png',
             cssName: 'sprite.css',
-            imgPath: '../img/sprite.png',
-            retinaImgPath: '../img/sprite@2x.png',
+            imgPath: '../../img/sprite.png',
+            retinaImgPath: '../../img/sprite@2x.png',
             retinaSrcFilter: 'src/img/sprite/*@2x.png',
             retinaImgName: 'sprite@2x.png',
             padding: 5
