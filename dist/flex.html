@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Title </title>
+    <meta name="description" content="">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+      .swiper-slide {
+      background: #f1f1f1;
+      color: #000;
+      text-align: center;
+      line-height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell"><div>header</div>
+      <header class="margin-bottom-md background-primary color-white hide-mobile">
+        <div class="container">
+          <div class="wrapper height-md flex middle"><span class="margin-right-lg">LOGO</span>
+            <input class="auto padding-vertical-md line-height-lg" type="text" placeholder="arama">
+          </div>
+        </div>
+      </header>
+      <header class="relative margin-bottom-md background-primary color-white hide-desktop">
+        <input id="mobileMenu" type="checkbox" hidden="">
+        <input id="mobileSearch" type="checkbox" hidden="">
+        <label class="overlay mobile-menu-overlay cursor-pointer fixed" for="mobileMenu" onClick="enableBodyScroll(menuElement)"></label>
+        <label class="overlay mobile-search-overlay cursor-pointer fixed" for="mobileSearch"></label>
+        <ul class="mobile-menu-list column fixed color-white" id="mobileMenuList">
+          <li class="mobile-menu-list-item padding-vertical-md line-height-lg cursor-pointer">Anasayfa</li>
+          <li class="mobile-menu-list-item padding-vertical-md line-height-lg cursor-pointer">Anasayfa</li>
+          <li class="mobile-menu-list-item padding-vertical-md line-height-lg cursor-pointer">Anasayfa</li>
+        </ul>
+        <div class="mobile-search padding-vertical-md absolute width-full height-full">
+          <form class="height-full" action="#search" method="get">
+            <div class="mobile-search-wrapper flex middle height-full">
+              <input class="mobile-search-input auto padding-vertical-md line-height-lg" id="mobileSearchText" type="text" name="search" placeholder="Arama"><span class="color-black relative margin-left-md"><span class="mobile-search-trigger relative">SEARCH</span>
+                <input class="mobile-search-hidden-input absolute width-full height-full" type="submit"></span>
+            </div>
+          </form>
+          <div class="mobile-search-background absolute"></div>
+        </div>
+        <div class="container">
+          <div class="wrapper height-md flex width-full">
+            <div class="flex start middle equal">
+              <label for="mobileMenu" onClick="disableBodyScroll(menuElement)">MENU</label>
+            </div>
+            <div class="flex center middle equal">LOGO</div>
+            <div class="flex end middle equal">
+              <label for="mobileSearch">SEARCH</label>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="background-primary color-white padding-horizontal-lg">
+        <div class="container">
+          <ul class="row mobile-margin">
+            <li class="col-4 col-mb-12">card1
+              <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+              <h3 class="line-camp line-2 margin-top-md">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+                dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
+                magni ullam.
+              </h3>
+            </li>
+            <li class="col-4 col-mb-12">card2
+              <ul>
+                <li>
+                  <div class="cover" style="height:200px;background-image:url('https://source.unsplash.com/random')"></div>
+                </li>
+                <li>
+                  <h3 class="line-camp line-2 margin-top-md">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime
+                    dolore
+                    dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
+                    magni ullam.
+                  </h3>
+                </li>
+              </ul>
+            </li>
+            <li class="col-4 col-mb-12">card3
+              <div class="relative">
+                <div class="image-wrapper gradient"><img src="https://source.unsplash.com/random" alt=""></div>
+                <h3 class="line-camp line-2 padding-vertical-md color-white absolute left-0 bottom-0 margin-bottom-md">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+                  dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
+                  magni ullam.
+                </h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <main>
+        <div class="container">
+          <ul class="row margin">
+            <li class="col-4 col-mb-12">card1
+              <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+              <h3 class="line-camp line-2 margin-top-md">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+                dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
+                magni ullam.
+              </h3>
+            </li>
+            <li class="col-4 col-mb-12">card2
+              <ul>
+                <li>
+                  <div class="cover" style="height:200px;background-image:url('https://source.unsplash.com/random')"></div>
+                </li>
+                <li>
+                  <h3 class="line-camp line-2 margin-top-md">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime
+                    dolore
+                    dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
+                    magni ullam.
+                  </h3>
+                </li>
+              </ul>
+            </li>
+            <li class="col-4 col-mb-12">card3
+              <div class="relative">
+                <div class="image-wrapper gradient"><img src="https://source.unsplash.com/random" alt=""></div>
+                <h3 class="line-camp line-2 padding-vertical-md color-white absolute left-0 bottom-0 margin-bottom-md">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+                  dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
+                  magni ullam.
+                </h3>
+              </div>
+            </li>
+            <li class="col-4 col-mb-12">card4
+              <div class="row">
+                <div class="col-4">
+                  <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+                </div>
+                <div class="col-8">
+                  <h3 class="line-camp line-2 margin-top-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore</h3>
+                </div>
+              </div>
+            </li>
+            <li class="col-4 col-mb-12">card5
+              <div class="border">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+                  </div>
+                  <div class="col-8">
+                    <h3 class="line-camp line-2 margin-top-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-4 col-mb-12">card6
+              <div class="shadow">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+                  </div>
+                  <div class="col-8">
+                    <h3 class="line-camp line-2 margin-top-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-4 col-mb-12">
+              <ul class="column margin">
+                <li>List</li>
+                <li>
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="shadow">
+                        <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <h3 class="line-camp line-2 margin-top-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+                    </div>
+                    <div class="col-8">
+                      <h3 class="line-camp line-2 margin-top-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="col-4 col-mb-12">
+              <ul class="column margin">
+                <li>Pagination</li>
+                <li>
+                  <ul class="pagination flex middle">
+                    <li class="radius-circle margin-right-sm margin-left-sm text-center cursor-pointer active">1</li>
+                    <li class="radius-circle margin-righ-sm margin-left-sm text-center cursor-pointer">2</li>
+                  </ul>
+                </li>
+                <li>button</li>
+                <li>
+                  <div class="button inline-block radius-sm padding-vertical-md cursor-pointer">Button</div>
+                </li>
+                <li>dropdown</li>
+                <li>
+                  <ul>
+                    <li class="dropdown inline-block cursor-pointer"><span class="line-height-lg">Dropdown</span>
+                      <ul class="dropdown-select absolute display-none background-white shadow">
+                        <li class="dropdown-item line-height-lg padding-vertical-md">Select-1</li>
+                        <li class="dropdown-item line-height-lg padding-vertical-md">Select-2</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="flex">
+                  <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+                  <label for="styled-checkbox-1">Checkbox</label>
+                </li>
+                <li class="flex">
+                  <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2" checked="">
+                  <label for="styled-checkbox-2">CSS Only</label>
+                </li>
+                <li class="flex">
+                  <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value3" disabled="">
+                  <label for="styled-checkbox-3">A disabled checkbox</label>
+                </li>
+                <li class="flex">
+                  <input class="styled-checkbox" id="styled-checkbox-4" type="checkbox" value="value4">
+                  <label for="styled-checkbox-4">Fourth option</label>
+                </li>
+                <li class="flex">
+                  <input class="styled-checkbox radio" id="styled-radio-1" type="radio" name="radio" value="value1">
+                  <label for="styled-radio-1">Radio</label>
+                </li>
+                <li class="flex">
+                  <input class="styled-checkbox radio" id="styled-radio-2" type="radio" name="radio" value="value2" checked="">
+                  <label for="styled-radio-2">CSS Only</label>
+                </li>
+                <li class="flex">
+                  <input class="styled-checkbox radio" id="styled-radio-3" type="radio" name="radio" value="value3" disabled="">
+                  <label for="styled-radio-3">A disabled radio</label>
+                </li>
+                <li class="flex">
+                  <input class="styled-checkbox radio" id="styled-radio-4" type="radio" name="radio" value="value4">
+                  <label for="styled-radio-4">Fourth option</label>
+                </li>
+              </ul>
+            </li>
+            <li class="col-12">
+              <ul class="row margin">
+                <li class="col-12">layout-1</li>
+                <li class="col-4 col-mb-12">
+                  <ul class="column margin">
+                    <li>
+                      <div class="shadow">
+                        <div class="column">
+                          <div class="cover" style="height:400px;background-image:url('https://source.unsplash.com/random')"></div>
+                          <div style="height:100px;">
+                            <h3 class="line-camp line-2 padding-vertical-sm margin-top-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="shadow">
+                        <div class="column">
+                          <div class="cover" style="height:400px;background-image:url('https://source.unsplash.com/random')"></div>
+                          <div style="height:100px;">
+                            <h3 class="line-camp line-2 padding-vertical-sm margin-top-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="col-4 col-mb-12">
+                  <div class="shadow">
+                    <div class="column">
+                      <div class="cover" style="height:912px;background-image:url('https://source.unsplash.com/random')"></div>
+                      <div style="height:100px;">
+                        <h3 class="line-camp line-2 padding-vertical-sm margin-top-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="col-4 col-mb-12">
+                  <ul class="column margin">
+                    <li>
+                      <div class="shadow">
+                        <div class="column">
+                          <div class="cover" style="height:400px;background-image:url('https://source.unsplash.com/random')"></div>
+                          <div style="height:100px;">
+                            <h3 class="line-camp line-2 padding-vertical-sm margin-top-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="shadow">
+                        <div class="column">
+                          <div class="cover" style="height:400px;background-image:url('https://source.unsplash.com/random')"></div>
+                          <div style="height:100px;">
+                            <h3 class="line-camp line-2 padding-vertical-sm margin-top-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="col-12">
+              <div class="swiper-container">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                  <div class="swiper-slide">Slide 10</div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </li>
+          </ul>
+          <div class="background-primary height-lg"></div>
+          <ul>
+            <li class="color-graylight">gray light</li>
+            <li class="color-graymedium">gray medium</li>
+            <li class="color-graydark">gray dark</li>
+          </ul>
+        </div>
+      </main>
+      <div class="height-lg"></div>
+      <div class="height-lg"></div>
+      <div class="height-lg"></div>
+      <div class="height-lg"></div>
+      <div class="height-lg"></div>
+      <div class="height-lg"></div>
+      <div class="popup">
+        <input id="popup" type="checkbox" hidden="">
+        <label class="display-none overlay cursor-pointer fixed" for="popup"></label>
+        <div class="display-none popup-wrapper absolute background-white radius-md">
+          <label class="popup-close absolute color-white cursor-pointer" for="popup">Close</label>
+          <div class="wrapper"><img class="responsive-image" src="https://source.unsplash.com/random" alt=""></div>
+        </div>
+      </div><div>footer</div>
+    </div>
+    <script src="assets/js/min/scripts-min.js"></script>
+    <script>
+      var swiper = new Swiper({
+      el: '.swiper-container',
+      spaceBetween: 50,
+      slidesPerView: 1,
+      centeredSlides: false,
+      pagination: {
+      el: '.swiper-pagination',
+      },
+      navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      },
+      });
+    </script>
+  </body>
+</html>

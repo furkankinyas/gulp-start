@@ -1,4 +1,4 @@
-const   gulp = require('gulp'),
+const  { src, dest, parallel, watch, series } = require('gulp'),
         sass = require('gulp-sass'),
         cssmin = require('gulp-clean-css'),
         concat = require('gulp-concat'),
@@ -22,7 +22,7 @@ const   gulp = require('gulp'),
 
 // npm install gulp gulp-sass gulp-clean-css gulp-concat gulp-uglify gulp-autoprefixer browser-sync gulp-size gulp-imagemin imagemin-optipng imagemin-svgo imagemin-mozjpeg gulp-plumber gulp-notify gulp-pug gulp-iconfont gulp-iconfont-css gulp.spritesmith vinyl-buffer merge-stream --save-dev
 
-const { src, dest, parallel, watch, series } = require('gulp');
+
 
 // pug dosylarını html çevirir
 function pughtml(){
