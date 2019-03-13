@@ -1,9 +1,10 @@
 .dropdown {
-  background-color: $white;
+
 
   &:hover {
     .dropdown-select {
       display: block;
+      background-color: $white;
     }
   }
 

@@ -94,6 +94,18 @@ label {
 }
 
 // padding
+.padding-sm {
+  padding: $baseSize*3;
+}
+
+.padding-md {
+  padding: $baseSize*5;
+}
+
+.padding-lg {
+  padding: $baseSize*8;
+}
+
 .padding-horizontal-sm {
   padding: $baseSize*3 0;
 }
@@ -380,18 +392,6 @@ label {
     left: 50%;
     transform: translate(-50%,-50%);
   }
-}
-
-.height-sm {
-  height: 4rem;
-}
-
-.height-md {
-  height: 5rem;
-}
-
-.height-lg {
-  height: 6rem;
 }
 
 .line-camp {
