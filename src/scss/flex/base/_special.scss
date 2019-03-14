@@ -107,27 +107,40 @@ label {
 }
 
 .padding-horizontal-sm {
-  padding: $baseSize*3 0;
-}
-
-.padding-horizontal-md {
-  padding: $baseSize*5 0;
-}
-
-.padding-horizontal-lg {
-  padding: $baseSize*8 0;
-}
-
-.padding-vertical-sm {
   padding: 0 $baseSize*3;
 }
 
-.padding-vertical-md {
+.padding-horizontal-md {
   padding: 0 $baseSize*5;
 }
 
-.padding-vertical-lg {
+.padding-horizontal-lg {
   padding: 0 $baseSize*8;
+}
+
+.padding-vertical-sm {
+  padding: $baseSize*3 0;
+}
+
+.padding-vertical-md {
+  padding: $baseSize*5 0;
+}
+
+.padding-vertical-lg {
+  padding: $baseSize*8 0;
+}
+
+// header height
+.height-sm{
+  height: 3.2rem;
+}
+
+.height-md{
+  height: 4.8rem;
+}
+
+.height-lg{
+  height: 6.4rem;
 }
 
 // line-height
@@ -390,7 +403,7 @@ label {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
 

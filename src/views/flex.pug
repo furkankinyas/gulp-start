@@ -6,7 +6,7 @@ block content
     .container
       .wrapper.height-md.flex.middle
         span.margin-right-lg LOGO
-        input(type="text",placeholder="arama").auto.padding-vertical-md.line-height-lg
+        input(type="text",placeholder="arama").auto.padding-horizontal-md.line-height-lg
 
   header.relative.margin-bottom-md.background-primary.color-white.hide-desktop
     input#mobileMenu(type='checkbox', hidden='')
@@ -14,13 +14,13 @@ block content
     label.overlay.mobile-menu-overlay.cursor-pointer.fixed(for='mobileMenu',onClick="enableBodyScroll(menuElement)")
     label.overlay.mobile-search-overlay.cursor-pointer.fixed(for='mobileSearch')
     ul.mobile-menu-list.column.fixed.color-white#mobileMenuList
-      li.mobile-menu-list-item.padding-vertical-md.line-height-lg.cursor-pointer Anasayfa
-      li.mobile-menu-list-item.padding-vertical-md.line-height-lg.cursor-pointer Anasayfa
-      li.mobile-menu-list-item.padding-vertical-md.line-height-lg.cursor-pointer Anasayfa
-    .mobile-search.padding-vertical-md.absolute.width-full.height-full
+      li.mobile-menu-list-item.padding-horizontal-md.line-height-lg.cursor-pointer Anasayfa
+      li.mobile-menu-list-item.padding-horizontal-md.line-height-lg.cursor-pointer Anasayfa
+      li.mobile-menu-list-item.padding-horizontal-md.line-height-lg.cursor-pointer Anasayfa
+    .mobile-search.padding-horizontal-md.absolute.width-full.height-full
       form.height-full(action='#search', method='get')
         .mobile-search-wrapper.flex.middle.height-full
-          input#mobileSearchText.mobile-search-input.auto.padding-vertical-md.line-height-lg(type='text', name='search', placeholder='Arama')
+          input#mobileSearchText.mobile-search-input.auto.padding-horizontal-md.line-height-lg(type='text', name='search', placeholder='Arama')
           span.color-black.relative.margin-left-md
             span.mobile-search-trigger.relative SEARCH
             input.mobile-search-hidden-input.absolute.width-full.height-full(type='submit')
@@ -61,7 +61,7 @@ block content
           .relative
             .image-wrapper.gradient
               img(src='https://source.unsplash.com/random', alt='')
-            h3.line-camp.line-2.padding-vertical-md.color-white.absolute.left-0.bottom-0.margin-bottom-md
+            h3.line-camp.line-2.padding-horizontal-md.color-white.absolute.left-0.bottom-0.margin-bottom-md
               | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
               | dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
               | magni ullam.
@@ -93,7 +93,7 @@ block content
           .relative
             .image-wrapper.gradient
               img(src='https://source.unsplash.com/random', alt='')
-            h3.line-camp.line-2.padding-vertical-md.color-white.absolute.left-0.bottom-0.margin-bottom-md
+            h3.line-camp.line-2.padding-horizontal-md.color-white.absolute.left-0.bottom-0.margin-bottom-md
               | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
               | dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
               | magni ullam.
@@ -161,17 +161,25 @@ block content
             li
               | button
             li
-              .button.inline-block.radius-sm.padding-vertical-md.cursor-pointer
+              .button.inline-block.radius-sm.padding-horizontal-md.cursor-pointer
                 | Button
             li dropdown
             li
               ul
                 li.dropdown.inline-block.cursor-pointer
                   span.line-height-lg Dropdown
-                  ul.dropdown-select.absolute.display-none.background-white.shadow
-                    li.dropdown-item.line-height-lg.padding-vertical-md
+                  ul.dropdown-select.absolute.display-none.background-white.shadow.padding-vertical-sm
+                    li.dropdown-item.line-height-lg.padding-horizontal-md
                       | Select-1
-                    li.dropdown-item.line-height-lg.padding-vertical-md
+                    li.dropdown-item.line-height-lg.padding-horizontal-md
+                      | Select-2
+                    li.dropdown-item.line-height-lg.padding-horizontal-md
+                      | Select-2
+                    li.dropdown-item.line-height-lg.padding-horizontal-md
+                      | Select-2
+                    li.dropdown-item.line-height-lg.padding-horizontal-md
+                      | Select-2
+                    li.dropdown-item.line-height-lg.padding-horizontal-md
                       | Select-2
             li.flex
               input#styled-checkbox-1.styled-checkbox(type='checkbox', value='value1')
@@ -202,7 +210,8 @@ block content
         li.col-12
           ul.row.margin
             li.col-12
-              | layout-1
+              .height-md
+                | layout-1
             li.col-4.col-mb-12
               ul.column.margin-bottom
                 li
@@ -210,21 +219,21 @@ block content
                     .column
                       div(style="height:400px;background-image:url('https://source.unsplash.com/random')").cover
                       div(style='height:100px;')
-                        h3.line-camp.line-2.padding-vertical-sm.margin-top-md
+                        h3.line-camp.line-2.padding-horizontal-sm.margin-top-md
                           | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
                 li
                   .shadow
                     .column
                       div(style="height:400px;background-image:url('https://source.unsplash.com/random')").cover
                       div(style='height:100px;')
-                        h3.line-camp.line-2.padding-vertical-sm.margin-top-md
+                        h3.line-camp.line-2.padding-horizontal-sm.margin-top-md
                           | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
             li.col-4.col-mb-12
               .shadow
                 .column
                   div(style="height:912px;background-image:url('https://source.unsplash.com/random')").cover
                   div(style='height:100px;')
-                    h3.line-camp.line-2.padding-vertical-sm.margin-top-md
+                    h3.line-camp.line-2.padding-horizontal-sm.margin-top-md
                       | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
             li.col-4.col-mb-12
               ul.column.margin-bottom
@@ -233,14 +242,14 @@ block content
                     .column
                       div(style="height:400px;background-image:url('https://source.unsplash.com/random')").cover
                       div(style='height:100px;')
-                        h3.line-camp.line-2.padding-vertical-sm.margin-top-md
+                        h3.line-camp.line-2.padding-horizontal-sm.margin-top-md
                           | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
                 li
                   .shadow
                     .column
                       div(style="height:400px;background-image:url('https://source.unsplash.com/random')").cover
                       div(style='height:100px;')
-                        h3.line-camp.line-2.padding-vertical-sm.margin-top-md
+                        h3.line-camp.line-2.padding-horizontal-sm.margin-top-md
                           | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
         li.col-12
           .swiper-container
