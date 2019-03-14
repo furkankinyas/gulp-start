@@ -10,7 +10,12 @@ html {
 
 body {
   font-size: 1.4rem;
-  min-width: $container;
+}
+
+@if $responsive==false {
+  body {
+    min-width: $container;
+  }
 }
 
 html,
