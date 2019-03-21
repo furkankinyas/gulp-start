@@ -4,8 +4,21 @@
     height: 3rem;
     line-height: 3rem;
     margin: 0 .4rem;
-    background-color: $graymedium;
     transition: background-color .3s;
+
+    &:not(.divider){
+      background-color: $graymedium;
+      color: $white;
+      &:hover {
+        background-color: $primary;
+        color: $white
+      }
+    }
+
+    &.divider{
+      padding-bottom: .6rem;
+      color: $graymedium;
+    }
 
     &.active {
       background-color: $primary;
