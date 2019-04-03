@@ -107,39 +107,39 @@ label {
 
 // padding
 .padding-sm {
-  padding: $baseSize*3;
+  padding: $baseSize;
 }
 
 .padding-md {
-  padding: $baseSize*5;
+  padding: $baseSize*3;
 }
 
 .padding-lg {
-  padding: $baseSize*8;
+  padding: $baseSize*5;
 }
 
 .padding-horizontal-sm {
-  padding: 0 $baseSize*3;
+  padding: 0 $baseSize;
 }
 
 .padding-horizontal-md {
-  padding: 0 $baseSize*5;
+  padding: 0 $baseSize*3;
 }
 
 .padding-horizontal-lg {
-  padding: 0 $baseSize*8;
+  padding: 0 $baseSize*5;
 }
 
 .padding-vertical-sm {
-  padding: $baseSize*3 0;
+  padding: $baseSize 0;
 }
 
 .padding-vertical-md {
-  padding: $baseSize*5 0;
+  padding: $baseSize*3 0;
 }
 
 .padding-vertical-lg {
-  padding: $baseSize*8 0;
+  padding: $baseSize*5 0;
 }
 
 // header height
