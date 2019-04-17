@@ -126,6 +126,16 @@ function js(){
             stream: true
         }));
 }
+// jsleri tek tek kullanım için minify etme
+function singlejs(){
+  return src('src/js/single/*.js')
+      .pipe(uglify())
+      .pipe(size({
+          gzip: true,
+          showFiles: true
+      }))
+      .pipe(dest('dist/assets/js/min'))
+}
 // plugin js min ve birleştirme
 function pluginjs(){
     return src('src/js/plugin/*.js')
@@ -162,6 +172,7 @@ function imgmin(){
 function live() {
     watch('src/scss/**/*', series(scss));
     watch('src/js/*.js', series(js));
+    watch('src/js/single/*.js', series(singlejs));
     watch('src/js/plugin/*.js', series(pluginjs));
     watch('src/views/**/*.pug', series(pughtml));
     watch('src/icon/*.svg', series(icon));
@@ -176,6 +187,7 @@ exports.icon = icon;
 exports.scss = scss;
 exports.browser = browser;
 exports.js = js;
+exports.singlejs = singlejs;
 exports.pluginjs = pluginjs;
 exports.font = font;
 exports.imgmin = imgmin;
