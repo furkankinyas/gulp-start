@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Title </title>
     <meta name="description" content="">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
       .swiper-slide {
@@ -45,12 +47,12 @@
           <div class="mobile-search-background absolute"></div>
         </div>
         <div class="container">
-          <div class="wrapper height-md flex width-full">
-            <div class="flex start middle equal">
+          <div class="wrapper flex width-full">
+            <div class="flex start middle equal height-md">
               <label for="mobileMenu" onClick="disableBodyScroll(menuElement)">MENU</label>
             </div>
-            <div class="flex center middle equal">LOGO</div>
-            <div class="flex end middle equal">
+            <div class="flex center middle equal height-md">LOGO</div>
+            <div class="flex end middle equal height-md">
               <label for="mobileSearch">SEARCH</label>
             </div>
           </div>
@@ -198,6 +200,7 @@
                 <li>
                   <ul class="pagination flex middle">
                     <li class="radius-circle margin-right-sm margin-left-sm text-center cursor-pointer active">1</li>
+                    <li class="radius-circle margin-righ-sm margin-left-sm text-center divider">...</li>
                     <li class="radius-circle margin-righ-sm margin-left-sm text-center cursor-pointer">2</li>
                   </ul>
                 </li>
