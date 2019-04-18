@@ -21,8 +21,50 @@
 
 @function icon-char($filename) {
   $char: "";
-  @if $filename==test {
+  @if $filename==arrow-back-ios {
       $char: "\E001";
+    }
+    @if $filename==arrow-back {
+      $char: "\E002";
+    }
+    @if $filename==arrow-down-keyboard {
+      $char: "\E003";
+    }
+    @if $filename==arrow-drop-down {
+      $char: "\E004";
+    }
+    @if $filename==arrow-forward-ios {
+      $char: "\E005";
+    }
+    @if $filename==arrow-forward {
+      $char: "\E006";
+    }
+    @if $filename==arrow-left-alt {
+      $char: "\E007";
+    }
+    @if $filename==arrow-left {
+      $char: "\E008";
+    }
+    @if $filename==arrow-right-alt {
+      $char: "\E009";
+    }
+    @if $filename==arrow-right {
+      $char: "\E00A";
+    }
+    @if $filename==facebook {
+      $char: "\E00B";
+    }
+    @if $filename==instagram {
+      $char: "\E00C";
+    }
+    @if $filename==twitter {
+      $char: "\E00D";
+    }
+    @if $filename==whatsapp {
+      $char: "\E00E";
+    }
+    @if $filename==youtube {
+      $char: "\E00F";
     }
     @return $char;
 }
@@ -33,7 +75,49 @@
   }
 }
 
-.icon-test {
-    @include icon(test);
+.icon-arrow-back-ios {
+    @include icon(arrow-back-ios);
+  }
+  .icon-arrow-back {
+    @include icon(arrow-back);
+  }
+  .icon-arrow-down-keyboard {
+    @include icon(arrow-down-keyboard);
+  }
+  .icon-arrow-drop-down {
+    @include icon(arrow-drop-down);
+  }
+  .icon-arrow-forward-ios {
+    @include icon(arrow-forward-ios);
+  }
+  .icon-arrow-forward {
+    @include icon(arrow-forward);
+  }
+  .icon-arrow-left-alt {
+    @include icon(arrow-left-alt);
+  }
+  .icon-arrow-left {
+    @include icon(arrow-left);
+  }
+  .icon-arrow-right-alt {
+    @include icon(arrow-right-alt);
+  }
+  .icon-arrow-right {
+    @include icon(arrow-right);
+  }
+  .icon-facebook {
+    @include icon(facebook);
+  }
+  .icon-instagram {
+    @include icon(instagram);
+  }
+  .icon-twitter {
+    @include icon(twitter);
+  }
+  .icon-whatsapp {
+    @include icon(whatsapp);
+  }
+  .icon-youtube {
+    @include icon(youtube);
   }
   
