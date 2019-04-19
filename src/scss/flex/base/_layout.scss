@@ -13,6 +13,19 @@
   }
 }
 
+.border-bottom {
+  margin-bottom: -$gutter;
+
+  >* {
+    margin-bottom: $gutter;
+    padding-bottom: $gutter;
+    border-bottom: .1rem solid $graylight;
+    &:last-child{
+      border-bottom: 0;
+    }
+  }
+}
+
 .row {
   flex-direction: row;
   flex-wrap: wrap;
