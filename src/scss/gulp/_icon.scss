@@ -51,20 +51,23 @@
     @if $filename==arrow-right {
       $char: "\E00A";
     }
-    @if $filename==facebook {
+    @if $filename==email {
       $char: "\E00B";
     }
-    @if $filename==instagram {
+    @if $filename==facebook {
       $char: "\E00C";
     }
-    @if $filename==twitter {
+    @if $filename==instagram {
       $char: "\E00D";
     }
-    @if $filename==whatsapp {
+    @if $filename==twitter {
       $char: "\E00E";
     }
-    @if $filename==youtube {
+    @if $filename==whatsapp {
       $char: "\E00F";
+    }
+    @if $filename==youtube {
+      $char: "\E010";
     }
     @return $char;
 }
@@ -104,6 +107,9 @@
   }
   .icon-arrow-right {
     @include icon(arrow-right);
+  }
+  .icon-email {
+    @include icon(email);
   }
   .icon-facebook {
     @include icon(facebook);
