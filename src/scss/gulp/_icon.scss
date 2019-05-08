@@ -60,14 +60,17 @@
     @if $filename==instagram {
       $char: "\E00D";
     }
-    @if $filename==twitter {
+    @if $filename==menu {
       $char: "\E00E";
     }
-    @if $filename==whatsapp {
+    @if $filename==twitter {
       $char: "\E00F";
     }
-    @if $filename==youtube {
+    @if $filename==whatsapp {
       $char: "\E010";
+    }
+    @if $filename==youtube {
+      $char: "\E011";
     }
     @return $char;
 }
@@ -116,6 +119,9 @@
   }
   .icon-instagram {
     @include icon(instagram);
+  }
+  .icon-menu {
+    @include icon(menu);
   }
   .icon-twitter {
     @include icon(twitter);
