@@ -32,7 +32,7 @@
         <input id="mobileSearch" type="checkbox" hidden="">
         <label class="overlay mobile-menu-overlay cursor-pointer fixed" for="mobileMenu" onClick="enableBodyScroll(menuElement)"></label>
         <label class="overlay mobile-search-overlay cursor-pointer fixed" for="mobileSearch"></label>
-        <ul class="mobile-menu-list column fixed color-white" id="mobileMenuList">
+        <ul class="mobile-menu-list column fixed color-white background-black" id="mobileMenuList">
           <li class="mobile-menu-list-item padding-horizontal-md line-height-lg cursor-pointer">Anasayfa</li>
           <li class="mobile-menu-list-item padding-horizontal-md line-height-lg cursor-pointer">Anasayfa</li>
           <li class="mobile-menu-list-item padding-horizontal-md line-height-lg cursor-pointer">Anasayfa</li>
@@ -378,6 +378,10 @@
     </div>
     <script src="assets/js/min/scripts-min.js"></script>
     <script>
+      var disableBodyScroll = bodyScrollLock.disableBodyScroll;
+      var enableBodyScroll = bodyScrollLock.enableBodyScroll;
+      var menuElement = document.querySelector("#mobileMenuList");
+      
       var swiper = new Swiper({
       el: '.swiper-container',
       spaceBetween: 50,

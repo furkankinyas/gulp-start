@@ -13,7 +13,7 @@ block content
     input#mobileSearch(type='checkbox', hidden='')
     label.overlay.mobile-menu-overlay.cursor-pointer.fixed(for='mobileMenu',onClick="enableBodyScroll(menuElement)")
     label.overlay.mobile-search-overlay.cursor-pointer.fixed(for='mobileSearch')
-    ul.mobile-menu-list.column.fixed.color-white#mobileMenuList
+    ul.mobile-menu-list.column.fixed.color-white.background-black#mobileMenuList
       li.mobile-menu-list-item.padding-horizontal-md.line-height-lg.cursor-pointer Anasayfa
       li.mobile-menu-list-item.padding-horizontal-md.line-height-lg.cursor-pointer Anasayfa
       li.mobile-menu-list-item.padding-horizontal-md.line-height-lg.cursor-pointer Anasayfa
@@ -310,6 +310,10 @@ block css
     }
 block js 
   script.
+      var disableBodyScroll = bodyScrollLock.disableBodyScroll;
+      var enableBodyScroll = bodyScrollLock.enableBodyScroll;
+      var menuElement = document.querySelector("#mobileMenuList");
+
       var swiper = new Swiper({
       el: '.swiper-container',
       spaceBetween: 50,
