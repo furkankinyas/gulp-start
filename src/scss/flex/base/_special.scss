@@ -414,19 +414,36 @@ label {
   max-width: 100%;
 }
 
-.image-wrapper {
+.image-wrapper,.embed-wrapper{
   width: 100%;
   position: relative;
   overflow: hidden;
   padding-bottom: 56.25%;
   background-color: $graylight;
+}
 
+.image-wrapper {
   img {
     width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
+    &.vertical{
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.embed-wrapper {
+  iframe{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
   }
 }
 
