@@ -1,33 +1,34 @@
 .pagination {
   li {
-    width: 3rem;
-    height: 3rem;
-    line-height: 3rem;
-    margin: 0 .4rem;
-    transition: background-color .3s;
-
-    &:not(.divider){
-      background-color: $graymedium;
-      color: $white;
-      &:hover {
-        background-color: $primary;
-        color: $white
+    a {
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem;
+      transition: opacity 0.3s;
+      opacity: 1;
+      &:hover{
+        opacity: .9;
       }
     }
 
-    &.divider{
-      padding-bottom: .6rem;
+    i {
+      line-height: 3rem;
+    }
+
+    &.multiple {
+      i {
+        margin: 0 -0.3rem;
+      }
+    }
+
+    &.divider {
+      padding-bottom: 0.6rem;
       color: $graymedium;
     }
 
     &.active {
       background-color: $primary;
-      color: $white
-    }
-
-    &:hover {
-      background-color: $primary;
-      color: $white
+      color: $white;
     }
   }
 }

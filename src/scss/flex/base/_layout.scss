@@ -5,27 +5,6 @@
   padding-left: $container-padding;
 }
 
-.margin-bottom {
-  margin-bottom: -$gutter;
-
-  >* {
-    margin-bottom: $gutter;
-  }
-}
-
-.border-bottom {
-  margin-bottom: -$gutter;
-
-  >* {
-    margin-bottom: $gutter;
-    padding-bottom: $gutter;
-    border-bottom: .1rem solid $graylight;
-    &:last-child{
-      border-bottom: 0;
-    }
-  }
-}
-
 .row {
   flex-direction: row;
   flex-wrap: wrap;
@@ -37,55 +16,85 @@
 .col,
 .col-3,
 .col-4,
+.col-5,
 .col-6,
+.col-7,
 .col-8,
 .col-12 {
   padding-left: $gutter-width;
   padding-right: $gutter-width;
 }
 
+.col {
+  flex: 1 0;
+}
 
 .col-3 {
-  width: (3*(100%/12));
+  width: (3 * (100%/12));
 }
 
 .col-4 {
-  width:  33.3333333%;
+  width: 33.3333333%;
+}
+
+.col-5 {
+  width: (5 * (100%/12));
 }
 
 .col-6 {
-  width: (6*(100%/12));
+  width: (6 * (100%/12));
+}
+
+.col-7 {
+  width: (7 * (100%/12));
 }
 
 .col-8 {
-  width: (8*(100%/12));
+  width: (8 * (100%/12));
 }
 
 .col-12 {
-  width: (12*(100%/12));
+  width: (12 * (100%/12));
 }
-
 
 @if $responsive==true {
   .container {
     max-width: $container;
   }
 
+  @media (max-width: $lg) {
+    .col-lg-4 {
+      width: (4 * (100%/12));
+    }
+
+    .col-lg-6 {
+      width: (6 * (100%/12));
+    }
+
+    .col-lg-8 {
+      width: (8 * (100%/12));
+    }
+
+    .col-lg-12 {
+      width: (12 * (100%/12));
+    }
+  }
+
   @media (max-width: $md) {
-    .col-mb-4 {
-      width: (4*(100%/12));
+    .col-md-4 {
+      width: (4 * (100%/12));
     }
 
-    .col-mb-6 {
-      width: (6*(100%/12));
+    .col-md-6 {
+      width: (6 * (100%/12));
     }
 
-    .col-mb-8 {
-      width: (8*(100%/12));
+    .col-md-8 {
+      width: (8 * (100%/12));
     }
 
-    .col-mb-12 {
-      width: (12*(100%/12));
+    .col-md-12 {
+      width: (12 * (100%/12));
     }
   }
 }
@@ -100,13 +109,11 @@
   display: flex;
   flex-direction: row;
   flex: 0 1 auto;
-  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .column {
-  display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
 }
 
 .nowrap {
@@ -153,4 +160,60 @@
 
 .equal {
   flex: 1 0;
+}
+
+@media (max-width: $lg) {
+  .mb-row {
+    flex-direction: row;
+  }
+
+  .mb-column {
+    flex-direction: column;
+  }
+
+  .mb-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  .mb-start {
+    text-align: start;
+    justify-content: flex-start;
+  }
+
+  .mb-center {
+    justify-content: center;
+  }
+
+  .mb-end {
+    text-align: end;
+    justify-content: flex-end;
+  }
+
+  .mb-top {
+    align-items: flex-start;
+  }
+
+  .mb-middle {
+    align-items: center;
+  }
+
+  .mb-bottom {
+    align-items: flex-end;
+  }
+
+  .mb-between {
+    justify-content: space-between;
+  }
+
+  .mb-around {
+    justify-content: space-around;
+  }
+
+  .mb-auto {
+    flex: 1 auto;
+  }
+
+  .mb-equal {
+    flex: 1 0;
+  }
 }

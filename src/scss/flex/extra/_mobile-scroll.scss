@@ -1,16 +1,16 @@
-.scroll-container{
+.scroll-container {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  &.scroll-text{
+  &.scroll-text {
     white-space: nowrap;
   }
-  .scroll-item{
-    min-width: 80%;
-    &.small{
-      min-width: 38vw;
-    }
-    &:not(:last-child){
-      margin-right: 1.2rem;
-    }
+}
+.scroll-item {
+  min-width: 80%;
+  &.small {
+    min-width: 38vw;
+  }
+  &:not(:last-child) {
+    margin-right: 1.2rem;
   }
 }

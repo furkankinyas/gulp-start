@@ -1,3 +1,6 @@
+// @include placeholder {
+//   color: green;
+// }
 @mixin placeholder {
   ::-webkit-input-placeholder {
     @content

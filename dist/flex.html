@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
   <head>
+    <link rel="preload" href="/assets/font/icon.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="/assets/img/sprite.png">
+    <link rel="preconnect" href="https://img3.aksam.com.tr/" crossorigin>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,87 +14,77 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
       .swiper-slide {
-      background: #f1f1f1;
+      background: #ddd;
       color: #000;
       text-align: center;
       line-height: 300px;
+      }
+      .swiper-pagination{
+      	margin:0 -.4rem;
+      }
+      .swiper-pagination-bullet{
+      	width: .8rem;
+      	height: .8rem;
+      	background-color: #ddd;
+      	border-radius: 50%;
+      	margin: 0 .4rem;
+      }
+      .swiper-pagination-bullet-active{
+      	background-color: #000;
       }
     </style>
   </head>
   <body>
     <div class="shell"><div>header</div>
-      <header class="margin-bottom-md background-primary color-white hide-mobile">
+      <header class="margin-bottom-md background-primary color-white mb-mobile">
         <div class="container">
-          <div class="wrapper height-md flex middle"><span class="margin-right-lg">LOGO</span>
-            <input class="auto padding-horizontal-md line-height-lg" type="text" placeholder="arama">
-          </div>
+          <div class="wrapper height-sm flex middle"><span class="margin-right-lg">LOGO</span></div>
         </div>
       </header>
       <header class="relative margin-bottom-md background-primary color-white hide-desktop">
         <input id="mobileMenu" type="checkbox" hidden="">
-        <input id="mobileSearch" type="checkbox" hidden="">
-        <label class="overlay mobile-menu-overlay cursor-pointer fixed" for="mobileMenu" onClick="enableBodyScroll(menuElement)"></label>
-        <label class="overlay mobile-search-overlay cursor-pointer fixed" for="mobileSearch"></label>
-        <ul class="mobile-menu-list column fixed color-white background-black" id="mobileMenuList">
-          <li class="mobile-menu-list-item padding-horizontal-md line-height-lg cursor-pointer">Anasayfa</li>
-          <li class="mobile-menu-list-item padding-horizontal-md line-height-lg cursor-pointer">Anasayfa</li>
-          <li class="mobile-menu-list-item padding-horizontal-md line-height-lg cursor-pointer">Anasayfa</li>
+        <label class="overlay menu-overlay cursor-pointer fixed" for="mobileMenu" onClick="enableBodyScroll(menuElement)"></label>
+        <ul class="menu-list column fixed color-white background-black" id="mobileMenuList">
+          <li class="menu-list-item padding-horizontal-md line-height-lg cursor-pointer">Anasayfa</li>
+          <li class="menu-list-item padding-horizontal-md line-height-lg cursor-pointer">Anasayfa</li>
+          <li class="menu-list-item padding-horizontal-md line-height-lg cursor-pointer">Anasayfa</li>
         </ul>
-        <div class="mobile-search padding-horizontal-md absolute width-full height-full">
-          <form class="height-full" action="#search" method="get">
-            <div class="mobile-search-wrapper flex middle height-full">
-              <input class="mobile-search-input auto padding-horizontal-md line-height-lg" id="mobileSearchText" type="text" name="search" placeholder="Arama"><span class="color-black relative margin-left-md"><span class="mobile-search-trigger relative">SEARCH</span>
-                <input class="mobile-search-hidden-input absolute width-full height-full" type="submit"></span>
-            </div>
-          </form>
-          <div class="mobile-search-background absolute"></div>
-        </div>
         <div class="container">
           <div class="wrapper flex width-full">
-            <div class="flex start middle equal height-md">
+            <div class="flex start middle equal height-sm">
               <label for="mobileMenu" onClick="disableBodyScroll(menuElement)">MENU</label>
             </div>
-            <div class="flex center middle equal height-md">LOGO</div>
-            <div class="flex end middle equal height-md">
+            <div class="flex center middle equal height-sm">LOGO</div>
+            <div class="flex end middle equal height-sm">
               <label for="mobileSearch">SEARCH</label>
             </div>
           </div>
         </div>
       </header>
+      <h1 class="font-size-40 md-font-size-24 sm-font-size-12 text-center margin-bottom-md">helllo</h1>
       <main class="background-primary color-white padding-vertical-lg">
         <div class="container">
-          <ul class="row mobile-margin">
-            <li class="col-4 col-mb-12">card1
-              <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
-              <h3 class="line-camp line-2 margin-top-md">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
-                dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
-                magni ullam.
-              </h3>
+          <ul class="row mb-space-vertical-md">
+            <li class="col-4 col-md-12 col-lg-6">card1
+              <div class="relative"><a class="full-link" href="#0"></a>
+                <div class="media-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+                <div class="padding-vertical-md">
+                  <h3 class="line-camp line-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore</h3>
+                </div>
+              </div>
             </li>
-            <li class="col-4 col-mb-12">card2
-              <ul>
-                <li>
-                  <div class="cover" style="height:200px;background-image:url('https://source.unsplash.com/random')"></div>
-                </li>
-                <li>
-                  <h3 class="line-camp line-2 margin-top-md">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime
-                    dolore
-                    dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
-                    magni ullam.
-                  </h3>
-                </li>
-              </ul>
+            <li class="col-4 col-md-12 col-lg-6">card2
+              <div class="relative"><a class="full-link" href="#0"></a>
+                <div class="cover height-lg" style="background-image:url('https://source.unsplash.com/random')"></div>
+                <div class="padding-vertical-md">
+                  <h3 class="line-camp line-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore</h3>
+                </div>
+              </div>
             </li>
-            <li class="col-4 col-mb-12">card3
-              <div class="relative">
-                <div class="image-wrapper gradient"><img src="https://source.unsplash.com/random" alt=""></div>
-                <h3 class="line-camp line-2 padding-horizontal-md color-white absolute left-0 bottom-0 margin-bottom-md">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
-                  dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
-                  magni ullam.
-                </h3>
+            <li class="col-4 col-md-12 col-lg-6">card3
+              <div class="relative"><a class="full-link" href="#0"></a>
+                <div class="media-wrapper gradient"><img src="https://source.unsplash.com/random" alt=""></div>
+                <h3 class="line-camp line-2 padding-horizontal-md color-white absolute left-0 bottom-0 margin-bottom-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore</h3>
               </div>
             </li>
           </ul>
@@ -99,126 +92,111 @@
       </main>
       <main>
         <div class="container">
-          <ul class="row margin">
-            <li class="col-4 col-mb-12">card1
-              <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
-              <h3 class="line-camp line-2 margin-top-md">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
-                dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
-                magni ullam.
-              </h3>
-            </li>
-            <li class="col-4 col-mb-12">card2
-              <ul>
-                <li>
-                  <div class="cover" style="height:200px;background-image:url('https://source.unsplash.com/random')"></div>
-                </li>
-                <li>
-                  <h3 class="line-camp line-2 margin-top-md">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime
-                    dolore
-                    dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
-                    magni ullam.
-                  </h3>
-                </li>
-              </ul>
-            </li>
-            <li class="col-4 col-mb-12">card3
-              <div class="relative">
-                <div class="image-wrapper gradient"><img src="https://source.unsplash.com/random" alt=""></div>
-                <h3 class="line-camp line-2 padding-horizontal-md color-white absolute left-0 bottom-0 margin-bottom-md">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
-                  dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
-                  magni ullam.
-                </h3>
-              </div>
-            </li>
-            <li class="col-4 col-mb-12">card4
-              <div class="row">
-                <div class="col-4">
-                  <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
-                </div>
-                <div class="col-8">
-                  <h3 class="line-camp line-2 margin-top-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore</h3>
+          <ul class="row space-vertical-md">
+            <li class="col-4 col-md-12">card4
+              <div class="relative"><a class="full-link" href="#0"></a>
+                <div class="media-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+                <div class="padding-vertical-md">
+                  <h3 class="line-camp line-2"></h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
                 </div>
               </div>
             </li>
-            <li class="col-4 col-mb-12">card5
+            <li class="col-4 col-md-12">card5
               <div class="border">
-                <div class="row">
-                  <div class="col-4">
-                    <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
-                  </div>
-                  <div class="col-8">
-                    <h3 class="line-camp line-2 margin-top-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                <div class="relative"><a class="full-link" href="#0"></a>
+                  <div class="media-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+                  <div class="padding-md">
+                    <h3 class="line-camp line-2"></h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
                   </div>
                 </div>
               </div>
             </li>
-            <li class="col-4 col-mb-12">card6
+            <li class="col-4 col-md-12">card6
               <div class="shadow">
-                <div class="row">
-                  <div class="col-4">
-                    <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
-                  </div>
-                  <div class="col-8">
-                    <h3 class="line-camp line-2 margin-top-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                <div class="relative"><a class="full-link" href="#0"></a>
+                  <div class="media-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+                  <div class="padding-md">
+                    <h3 class="line-camp line-2"></h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
                   </div>
                 </div>
               </div>
             </li>
-            <li class="col-4 col-mb-12">
-              <ul class="column margin-bottom">
+            <li class="col-4 col-md-12">
+              <ul class="column border-bottom">
                 <li>List</li>
                 <li>
-                  <div class="row">
-                    <div class="col-4">
-                      <div class="shadow">
-                        <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+                  <div class="relative"><a class="full-link" href="#0"></a>
+                    <div class="flex nowrap">
+                      <div class="height-md width-md margin-right-md">
+                        <div class="media-wrapper vertical"><img src="https://source.unsplash.com/random" alt=""></div>
                       </div>
-                    </div>
-                    <div class="col-8">
-                      <h3 class="line-camp line-2 margin-top-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                      <div class="auto">
+                        <div>
+                          <h3 class="line-camp line-2"></h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="row">
-                    <div class="col-4">
-                      <div class="image-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+                  <div class="relative"><a class="full-link" href="#0"></a>
+                    <div class="flex nowrap">
+                      <div class="height-sm width-sm margin-right-md">
+                        <div class="media-wrapper vertical"><img src="https://source.unsplash.com/random" alt=""></div>
+                      </div>
+                      <div class="auto">
+                        <div>
+                          <h3 class="line-camp line-2"></h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-8">
-                      <h3 class="line-camp line-2 margin-top-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                  </div>
+                </li>
+                <li>
+                  <div class="relative"><a class="full-link" href="#0"></a>
+                    <div class="row small">
+                      <div class="col-6">
+                        <div class="media-wrapper"><img src="https://source.unsplash.com/random" alt=""></div>
+                      </div>
+                      <div class="col-6">
+                        <div>
+                          <h3 class="line-camp line-2"></h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </li>
               </ul>
             </li>
-            <li class="col-4 col-mb-12">
+            <li class="col-4 col-md-12">
               <ul class="column margin-bottom">
                 <li>Pagination</li>
                 <li>
-                  <ul class="pagination flex middle">
-                    <li class="radius-circle margin-right-sm margin-left-sm text-center cursor-pointer active">1</li>
-                    <li class="radius-circle margin-righ-sm margin-left-sm text-center divider">...</li>
-                    <li class="radius-circle margin-righ-sm margin-left-sm text-center cursor-pointer">2</li>
+                  <ul class="pagination flex middle center space-horizontal-sm color-white">
+                    <li class="multiple"><a class="block background-primary text-center radius-circle" href="#0"><i class="icon icon-arrow-back-ios font-size-10"></i><i class="icon icon-arrow-back-ios font-size-10"></i></a></li>
+                    <li><a class="block background-primary text-center radius-circle" href="#0"><i class="icon icon-arrow-back-ios font-size-10"></i></a></li>
+                    <li><a class="block background-primary text-center active radius-circle" href="#0">1</a></li>
+                    <li><a class="block background-primary text-center active radius-circle" href="#0">2</a></li>
+                    <li class="text-center divider radius-circle">...</li>
+                    <li><a class="block background-primary text-center radius-circle" href="#0">3</a></li>
+                    <li class="multiple"><a class="block background-primary text-center radius-circle" href="#0"><i class="icon icon-arrow-forward-ios font-size-10"></i><i class="icon icon-arrow-forward-ios font-size-10"></i></a></li>
+                    <li><a class="block background-primary text-center radius-circle" href="#0"><i class="icon icon-arrow-forward-ios font-size-10"></i></a></li>
                   </ul>
                 </li>
                 <li>button</li>
-                <li>
-                  <div class="button inline-block radius-sm padding-horizontal-md cursor-pointer">Button</div>
-                </li>
+                <li><a class="flex" href="#0">
+                    <div class="button radius-sm flex middle background-primary color-white"><i class="icon icon-arrow-forward-ios margin-right-sm"></i><span>Button</span></div></a></li>
                 <li>dropdown</li>
                 <li>
                   <ul>
                     <li class="dropdown inline-block cursor-pointer"><span class="line-height-lg">Dropdown</span>
                       <ul class="dropdown-select absolute display-none background-white shadow padding-vertical-sm">
-                        <li class="dropdown-item line-height-lg padding-horizontal-md">Select-1</li>
-                        <li class="dropdown-item line-height-lg padding-horizontal-md">Select-2</li>
-                        <li class="dropdown-item line-height-lg padding-horizontal-md">Select-2</li>
-                        <li class="dropdown-item line-height-lg padding-horizontal-md">Select-2</li>
-                        <li class="dropdown-item line-height-lg padding-horizontal-md">Select-2</li>
-                        <li class="dropdown-item line-height-lg padding-horizontal-md">Select-2</li>
+                        <li class="dropdown-item"><a class="line-height-lg padding-horizontal-md block" href="#0">Select-1</a></li>
+                        <li class="dropdown-item"><a class="line-height-lg padding-horizontal-md block" href="#0">Select-2</a></li>
+                        <li class="dropdown-item"><a class="line-height-lg padding-horizontal-md block" href="#0">Select-2</a></li>
+                        <li class="dropdown-item"><a class="line-height-lg padding-horizontal-md block" href="#0">Select-2</a></li>
+                        <li class="dropdown-item"><a class="line-height-lg padding-horizontal-md block" href="#0">Select-2</a></li>
+                        <li class="dropdown-item"><span class="line-height-lg padding-horizontal-md block">Select-2</span></li>
                       </ul>
                     </li>
                   </ul>
@@ -260,16 +238,16 @@
             <li class="col-12">
               <ul class="row margin">
                 <li class="col-12">
-                  <div class="height-md">layout-1</div>
+                  <div class="height-sm">layout-1</div>
                 </li>
-                <li class="col-4 col-mb-12">
+                <li class="col-4 col-md-12">
                   <ul class="column margin-bottom">
                     <li>
                       <div class="shadow">
                         <div class="column">
                           <div class="cover" style="height:400px;background-image:url('https://source.unsplash.com/random')"></div>
                           <div style="height:100px;">
-                            <h3 class="line-camp line-2 padding-horizontal-sm margin-top-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                            <h3 class="line-camp line-2 padding-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
                           </div>
                         </div>
                       </div>
@@ -279,31 +257,31 @@
                         <div class="column">
                           <div class="cover" style="height:400px;background-image:url('https://source.unsplash.com/random')"></div>
                           <div style="height:100px;">
-                            <h3 class="line-camp line-2 padding-horizontal-sm margin-top-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                            <h3 class="line-camp line-2 padding-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
                           </div>
                         </div>
                       </div>
                     </li>
                   </ul>
                 </li>
-                <li class="col-4 col-mb-12">
+                <li class="col-4 col-md-12">
                   <div class="shadow">
                     <div class="column">
                       <div class="cover" style="height:912px;background-image:url('https://source.unsplash.com/random')"></div>
                       <div style="height:100px;">
-                        <h3 class="line-camp line-2 padding-horizontal-sm margin-top-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                        <h3 class="line-camp line-2 padding-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
                       </div>
                     </div>
                   </div>
                 </li>
-                <li class="col-4 col-mb-12">
+                <li class="col-4 col-md-12">
                   <ul class="column margin-bottom">
                     <li>
                       <div class="shadow">
                         <div class="column">
                           <div class="cover" style="height:400px;background-image:url('https://source.unsplash.com/random')"></div>
                           <div style="height:100px;">
-                            <h3 class="line-camp line-2 padding-horizontal-sm margin-top-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                            <h3 class="line-camp line-2 padding-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
                           </div>
                         </div>
                       </div>
@@ -313,7 +291,7 @@
                         <div class="column">
                           <div class="cover" style="height:400px;background-image:url('https://source.unsplash.com/random')"></div>
                           <div style="height:100px;">
-                            <h3 class="line-camp line-2 padding-horizontal-sm margin-top-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
+                            <h3 class="line-camp line-2 padding-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi</h3>
                           </div>
                         </div>
                       </div>
@@ -323,7 +301,7 @@
               </ul>
             </li>
             <li class="col-12">
-              <div class="swiper-container">
+              <div class="slider swiper-container">
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-wrapper">
@@ -338,17 +316,39 @@
                   <div class="swiper-slide">Slide 9</div>
                   <div class="swiper-slide">Slide 10</div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="div">
+                  <div class="swiper-pagination flex height-sm"></div>
+                </div>
+                <div class="slider-pagination">
+                  <ul class="flex between">
+                    <li><a target="_blank" href="">1</a></li>
+                    <li><a target="_blank" href="">2</a></li>
+                    <li><a target="_blank" href="">3</a></li>
+                    <li><a target="_blank" href="">4</a></li>
+                    <li><a target="_blank" href="">5</a></li>
+                    <li><a target="_blank" href="">6</a></li>
+                    <li><a target="_blank" href="">7</a></li>
+                    <li><a target="_blank" href="">8</a></li>
+                    <li><a target="_blank" href="">9</a></li>
+                    <li><a target="_blank" href="">10</a></li>
+                    <li><a target="_blank" href="">11</a></li>
+                    <li><a target="_blank" href="">12</a></li>
+                    <li><a target="_blank" href="">13</a></li>
+                    <li><a target="_blank" href="">14</a></li>
+                    <li><a target="_blank" href="">15</a></li>
+                  </ul>
+                </div>
+                <div class="slider-arrow color-white"><i class="icon icon-arrow-back-ios cursor-pointer absolute padding-sm font-size-24 center-vertical"></i><i class="icon icon-arrow-forward-ios right-0 cursor-pointer absolute padding-sm font-size-24 center-vertical"></i></div>
               </div>
             </li>
           </ul>
           <div class="background-primary height-lg"></div>
-          <ul>
-            <li class="color-graylight">gray light</li>
-            <li class="color-graymedium">gray medium</li>
-            <li class="color-graydark">gray dark</li>
+          <ul class="space-vertical-sm margin-bottom-md">
+            <li class="color-gray-light">gray light</li>
+            <li class="color-gray-medium">gray medium</li>
+            <li class="color-gray-dark">gray dark</li>
           </ul>
-          <ul>
+          <ul class="flex space-horizontal-sm margin-bottom-md">
             <li class="icon icon-youtube"></li>
             <li class="icon icon-facebook"></li>
             <li class="icon icon-instagram"></li>
@@ -364,6 +364,32 @@
             <li class="icon icon-arrow-left-alt"></li>
             <li class="icon icon-arrow-right-alt"></li>
             <li class="icon icon-arrow-down-keyboard"></li>
+          </ul>
+          <div class="margin-bottom-lg">
+            <ul class="flex space-horizontal-md mb-column mb-space-vertical-md mb-space-horizontal-0">
+              <li>list1</li>
+              <li>list2</li>
+              <li>list3</li>
+              <li>list4</li>
+              <li>list5</li>
+              <li>list6</li>
+              <li>list7</li>
+              <li>list8</li>
+              <li>list9</li>
+              <li>list10</li>
+            </ul>
+          </div>
+          <ul class="flex between mb-column mb-space-vertical-md">
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+            <li>list5</li>
+            <li>list6</li>
+            <li>list7</li>
+            <li>list8</li>
+            <li>list9</li>
+            <li>list10</li>
           </ul>
         </div>
       </main>
@@ -383,17 +409,33 @@
       var menuElement = document.querySelector("#mobileMenuList");
       
       var swiper = new Swiper({
-      el: '.swiper-container',
-      spaceBetween: 50,
-      slidesPerView: 1,
-      centeredSlides: false,
-      pagination: {
-      el: '.swiper-pagination',
-      },
-      navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-      },
+      	el: '.slider.swiper-container',
+      	followFinger: false,
+      	simulateTouch: false,
+      	loop:true,
+      	slidesPerView: 1,
+      	 pagination: {
+      		el: '.swiper-pagination',
+      		clickable: true
+      	},
+      	navigation: {
+      	nextEl: '.icon-arrow-forward-ios',
+      	prevEl: '.icon-arrow-back-ios',
+      	autoplay: {
+      		delay: 5000
+      	}
+      	},
+      	on: {
+      		slideChangeTransitionEnd: function (swiper) {
+      			var activeIndex = $('.slider .swiper-slide-active').data("swiper-slide-index");
+      			$('.slider .slider-pagination li').removeClass("active");
+      			$('.slider .slider-pagination li').eq(activeIndex).addClass("active");
+      		}
+      	}
+      });
+      
+      $('.slider .slider-pagination li').hover(function () {
+      	swiper.slideTo($(this).index() + 1);
       });
     </script>
   </body>

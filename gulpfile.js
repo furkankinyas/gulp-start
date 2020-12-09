@@ -3,7 +3,6 @@ const  { src, dest, parallel, watch, series } = require('gulp'),
         cssmin = require('gulp-clean-css'),
         concat = require('gulp-concat'),
         uglify = require('gulp-uglify'),
-        prefix = require('gulp-autoprefixer'),
         browserSync = require('browser-sync'),
         reload = browserSync.reload,
         size = require('gulp-size'),
@@ -20,7 +19,7 @@ const  { src, dest, parallel, watch, series } = require('gulp'),
         buffer = require('vinyl-buffer'),
         merge = require('merge-stream');
 
-// npm install gulp gulp-sass gulp-clean-css gulp-concat gulp-uglify gulp-autoprefixer browser-sync gulp-size gulp-imagemin imagemin-optipng imagemin-svgo imagemin-mozjpeg gulp-plumber gulp-notify gulp-pug gulp-iconfont gulp-iconfont-css gulp.spritesmith vinyl-buffer merge-stream --save-dev
+// npm install gulp gulp-sass gulp-clean-css gulp-concat gulp-uglify browser-sync gulp-size gulp-imagemin imagemin-optipng imagemin-svgo imagemin-mozjpeg gulp-plumber gulp-notify gulp-pug gulp-iconfont gulp-iconfont-css gulp.spritesmith vinyl-buffer merge-stream --save-dev
 
 
 
@@ -41,15 +40,15 @@ function sprite(){
         .pipe(spritesmith({
             imgName: 'sprite.png',
             cssName: 'sprite.css',
-            imgPath: '../../img/sprite.png',
-            retinaImgPath: '../../img/sprite@2x.png',
+            imgPath: '../../img/sprite.png?v='+Date.now(),
+            retinaImgPath: '../../img/sprite@2x.png?v='+Date.now(),
             retinaSrcFilter: 'src/img/sprite/*@2x.png',
             retinaImgName: 'sprite@2x.png',
             padding: 5
         }));
     var imgStream = spriteData.img
         .pipe(buffer())
-        .pipe(imagemin(imagemin.optipng()))
+        .pipe(imagemin([imagemin.optipng()]))
         .pipe(dest('dist/assets/img'));
     var cssStream = spriteData.css
         .pipe(dest('src/scss/gulp/'))
@@ -93,7 +92,6 @@ function scss(){
             errorHandler: onError
         }))
         .pipe(sass())
-        .pipe(prefix())
         .pipe(cssmin())
         .pipe(size({
             gzip: true,

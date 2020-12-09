@@ -2,328 +2,402 @@ extends layout/layout.pug
 
 block content 
 
-  header.margin-bottom-md.background-primary.color-white.hide-mobile
-    .container
-      .wrapper.height-md.flex.middle
-        span.margin-right-lg LOGO
-        input(type="text",placeholder="arama").auto.padding-horizontal-md.line-height-lg
+	header.margin-bottom-md.background-primary.color-white.mb-mobile
+		.container
+			.wrapper.height-sm.flex.middle
+				span.margin-right-lg LOGO
 
-  header.relative.margin-bottom-md.background-primary.color-white.hide-desktop
-    input#mobileMenu(type='checkbox', hidden='')
-    input#mobileSearch(type='checkbox', hidden='')
-    label.overlay.mobile-menu-overlay.cursor-pointer.fixed(for='mobileMenu',onClick="enableBodyScroll(menuElement)")
-    label.overlay.mobile-search-overlay.cursor-pointer.fixed(for='mobileSearch')
-    ul.mobile-menu-list.column.fixed.color-white.background-black#mobileMenuList
-      li.mobile-menu-list-item.padding-horizontal-md.line-height-lg.cursor-pointer Anasayfa
-      li.mobile-menu-list-item.padding-horizontal-md.line-height-lg.cursor-pointer Anasayfa
-      li.mobile-menu-list-item.padding-horizontal-md.line-height-lg.cursor-pointer Anasayfa
-    .mobile-search.padding-horizontal-md.absolute.width-full.height-full
-      form.height-full(action='#search', method='get')
-        .mobile-search-wrapper.flex.middle.height-full
-          input#mobileSearchText.mobile-search-input.auto.padding-horizontal-md.line-height-lg(type='text', name='search', placeholder='Arama')
-          span.color-black.relative.margin-left-md
-            span.mobile-search-trigger.relative SEARCH
-            input.mobile-search-hidden-input.absolute.width-full.height-full(type='submit')
-      .mobile-search-background.absolute
-    .container
-      .wrapper.flex.width-full
-        .flex.start.middle.equal.height-md
-          label(for='mobileMenu', onClick="disableBodyScroll(menuElement)") MENU
-        .flex.center.middle.equal.height-md
-          | LOGO
-        .flex.end.middle.equal.height-md
-          label(for='mobileSearch') SEARCH
-  
-  main.background-primary.color-white.padding-vertical-lg
-    .container
-      ul.row.mobile-margin
-        li.col-4.col-mb-12
-          | card1
-          .image-wrapper
-            img(src='https://source.unsplash.com/random', alt='')
-          h3.line-camp.line-2.margin-top-md
-            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
-            | dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
-            | magni ullam.
-        li.col-4.col-mb-12
-          | card2
-          ul
-            li
-              .cover(style="height:200px;background-image:url('https://source.unsplash.com/random')")
-            li
-              h3.line-camp.line-2.margin-top-md
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime
-                | dolore
-                | dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
-                | magni ullam.
-        li.col-4.col-mb-12
-          | card3
-          .relative
-            .image-wrapper.gradient
-              img(src='https://source.unsplash.com/random', alt='')
-            h3.line-camp.line-2.padding-horizontal-md.color-white.absolute.left-0.bottom-0.margin-bottom-md
-              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
-              | dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
-              | magni ullam.
+	header.relative.margin-bottom-md.background-primary.color-white.hide-desktop
+		input#mobileMenu(type='checkbox', hidden='')
+		label.overlay.menu-overlay.cursor-pointer.fixed(for='mobileMenu',onClick="enableBodyScroll(menuElement)")
+		ul.menu-list.column.fixed.color-white.background-black#mobileMenuList
+			li.menu-list-item.padding-horizontal-md.line-height-lg.cursor-pointer Anasayfa
+			li.menu-list-item.padding-horizontal-md.line-height-lg.cursor-pointer Anasayfa
+			li.menu-list-item.padding-horizontal-md.line-height-lg.cursor-pointer Anasayfa
+		.container
+			.wrapper.flex.width-full
+				.flex.start.middle.equal.height-sm
+					label(for='mobileMenu', onClick="disableBodyScroll(menuElement)") MENU
+				.flex.center.middle.equal.height-sm
+					| LOGO
+				.flex.end.middle.equal.height-sm
+					label(for='mobileSearch') SEARCH
 
-  main
-    .container
-      ul.row.margin
-        li.col-4.col-mb-12
-          | card1
-          .image-wrapper
-            img(src='https://source.unsplash.com/random', alt='')
-          h3.line-camp.line-2.margin-top-md
-            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
-            | dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
-            | magni ullam.
-        li.col-4.col-mb-12
-          | card2
-          ul
-            li
-              .cover(style="height:200px;background-image:url('https://source.unsplash.com/random')")
-            li
-              h3.line-camp.line-2.margin-top-md
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime
-                | dolore
-                | dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
-                | magni ullam.
-        li.col-4.col-mb-12
-          | card3
-          .relative
-            .image-wrapper.gradient
-              img(src='https://source.unsplash.com/random', alt='')
-            h3.line-camp.line-2.padding-horizontal-md.color-white.absolute.left-0.bottom-0.margin-bottom-md
-              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
-              | dignissimos adipisci quidem error quo nemo temporibus consectetur quis officiis nobis veniam obcaecati
-              | magni ullam.
-        li.col-4.col-mb-12
-          | card4
-          .row
-            .col-4
-              .image-wrapper
-                img(src='https://source.unsplash.com/random', alt='')
-            .col-8
-              h3.line-camp.line-2.margin-top-sm
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
-        li.col-4.col-mb-12
-          | card5
-          .border
-            .row
-              .col-4
-                .image-wrapper
-                  img(src='https://source.unsplash.com/random', alt='')
-              .col-8
-                h3.line-camp.line-2.margin-top-sm
-                  | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
-        li.col-4.col-mb-12
-          | card6
-          .shadow
-            .row
-              .col-4
-                .image-wrapper
-                  img(src='https://source.unsplash.com/random', alt='')
-              .col-8
-                h3.line-camp.line-2.margin-top-sm
-                  | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
+	h1.font-size-40.md-font-size-24.sm-font-size-12.text-center.margin-bottom-md helllo
+	
+	main.background-primary.color-white.padding-vertical-lg
+		.container
+			ul.row.mb-space-vertical-md
+				li.col-4.col-md-12.col-lg-6
+					| card1
+					.relative
+						a(href="#0").full-link
+						.media-wrapper
+							img(src='https://source.unsplash.com/random', alt='')
+						.padding-vertical-md
+							h3.line-camp.line-2
+								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+				li.col-4.col-md-12.col-lg-6
+					| card2
+					.relative
+						a(href="#0").full-link
+						.cover(style="background-image:url('https://source.unsplash.com/random')").height-lg
+						.padding-vertical-md
+							h3.line-camp.line-2
+								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+				li.col-4.col-md-12.col-lg-6
+					| card3
+					.relative
+						a(href="#0").full-link
+						.media-wrapper.gradient
+							img(src='https://source.unsplash.com/random', alt='')
+						h3.line-camp.line-2.padding-horizontal-md.color-white.absolute.left-0.bottom-0.margin-bottom-md
+							| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
 
-        li.col-4.col-mb-12
-          ul.column.margin-bottom
-            li
-              | List
-            li
-              .row
-                .col-4
-                  .shadow
-                    .image-wrapper
-                      img(src='https://source.unsplash.com/random', alt='')
-                .col-8
-                  h3.line-camp.line-2.margin-top-sm
-                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
-            li
-              .row
-                .col-4
-                  .image-wrapper
-                    img(src='https://source.unsplash.com/random', alt='')
-                .col-8
-                  h3.line-camp.line-2.margin-top-sm
-                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
-        li.col-4.col-mb-12
-          ul.column.margin-bottom
-            li
-              | Pagination
-            li
-              ul.pagination.flex.middle
-                li.radius-circle.margin-right-sm.margin-left-sm.text-center.cursor-pointer.active
-                  | 1
-                li.radius-circle.margin-righ-sm.margin-left-sm.text-center.divider
-                  | ...
-                li.radius-circle.margin-righ-sm.margin-left-sm.text-center.cursor-pointer
-                  | 2
-            li
-              | button
-            li
-              .button.inline-block.radius-sm.padding-horizontal-md.cursor-pointer
-                | Button
-            li dropdown
-            li
-              ul
-                li.dropdown.inline-block.cursor-pointer
-                  span.line-height-lg Dropdown
-                  ul.dropdown-select.absolute.display-none.background-white.shadow.padding-vertical-sm
-                    li.dropdown-item.line-height-lg.padding-horizontal-md
-                      | Select-1
-                    li.dropdown-item.line-height-lg.padding-horizontal-md
-                      | Select-2
-                    li.dropdown-item.line-height-lg.padding-horizontal-md
-                      | Select-2
-                    li.dropdown-item.line-height-lg.padding-horizontal-md
-                      | Select-2
-                    li.dropdown-item.line-height-lg.padding-horizontal-md
-                      | Select-2
-                    li.dropdown-item.line-height-lg.padding-horizontal-md
-                      | Select-2
-            li.flex
-              input#styled-checkbox-1.styled-checkbox(type='checkbox', value='value1')
-              label(for='styled-checkbox-1') Checkbox
-            li.flex
-              input#styled-checkbox-2.styled-checkbox(type='checkbox', value='value2', checked='')
-              label(for='styled-checkbox-2') CSS Only
-            li.flex
-              input#styled-checkbox-3.styled-checkbox(type='checkbox', value='value3', disabled='')
-              label(for='styled-checkbox-3') A disabled checkbox
-            li.flex
-              input#styled-checkbox-4.styled-checkbox(type='checkbox', value='value4')
-              label(for='styled-checkbox-4') Fourth option
+	main
+		.container
+			ul.row.space-vertical-md
+				li.col-4.col-md-12
+					| card4
+					.relative
+						a(href="#0").full-link
+						.media-wrapper
+							img(src='https://source.unsplash.com/random', alt='')
+						.padding-vertical-md
+							h3.line-camp.line-2
+							| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+				li.col-4.col-md-12
+					| card5
+					.border
+						.relative
+							a(href="#0").full-link
+							.media-wrapper
+								img(src='https://source.unsplash.com/random', alt='')
+							.padding-md
+								h3.line-camp.line-2
+								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+				li.col-4.col-md-12
+					| card6
+					.shadow
+						.relative
+							a(href="#0").full-link
+							.media-wrapper
+								img(src='https://source.unsplash.com/random', alt='')
+							.padding-md
+								h3.line-camp.line-2
+								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
 
-            li.flex
-              input#styled-radio-1.styled-checkbox.radio(type='radio', name="radio", value='value1')
-              label(for='styled-radio-1') Radio
-            li.flex
-              input#styled-radio-2.styled-checkbox.radio(type='radio', name="radio", value='value2', checked='')
-              label(for='styled-radio-2') CSS Only
-            li.flex
-              input#styled-radio-3.styled-checkbox.radio(type='radio', name="radio", value='value3', disabled='')
-              label(for='styled-radio-3') A disabled radio
-            li.flex
-              input#styled-radio-4.styled-checkbox.radio(type='radio', name="radio", value='value4')
-              label(for='styled-radio-4') Fourth option
+				li.col-4.col-md-12
+					ul.column.border-bottom
+						li
+							| List
+						li
+							.relative
+								a(href="#0").full-link
+								.flex.nowrap
+									.height-md.width-md.margin-right-md
+										.media-wrapper.vertical
+											img(src='https://source.unsplash.com/random', alt='')
+									.auto
+										div
+											h3.line-camp.line-2
+											| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+						li
+							.relative
+								a(href="#0").full-link
+								.flex.nowrap
+									.height-sm.width-sm.margin-right-md
+										.media-wrapper.vertical
+											img(src='https://source.unsplash.com/random', alt='')
+									.auto
+										div
+											h3.line-camp.line-2
+											| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
 
-        li.col-12
-          ul.row.margin
-            li.col-12
-              .height-md
-                | layout-1
-            li.col-4.col-mb-12
-              ul.column.margin-bottom
-                li
-                  .shadow
-                    .column
-                      div(style="height:400px;background-image:url('https://source.unsplash.com/random')").cover
-                      div(style='height:100px;')
-                        h3.line-camp.line-2.padding-horizontal-sm.margin-top-md
-                          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
-                li
-                  .shadow
-                    .column
-                      div(style="height:400px;background-image:url('https://source.unsplash.com/random')").cover
-                      div(style='height:100px;')
-                        h3.line-camp.line-2.padding-horizontal-sm.margin-top-md
-                          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
-            li.col-4.col-mb-12
-              .shadow
-                .column
-                  div(style="height:912px;background-image:url('https://source.unsplash.com/random')").cover
-                  div(style='height:100px;')
-                    h3.line-camp.line-2.padding-horizontal-sm.margin-top-md
-                      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
-            li.col-4.col-mb-12
-              ul.column.margin-bottom
-                li
-                  .shadow
-                    .column
-                      div(style="height:400px;background-image:url('https://source.unsplash.com/random')").cover
-                      div(style='height:100px;')
-                        h3.line-camp.line-2.padding-horizontal-sm.margin-top-md
-                          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
-                li
-                  .shadow
-                    .column
-                      div(style="height:400px;background-image:url('https://source.unsplash.com/random')").cover
-                      div(style='height:100px;')
-                        h3.line-camp.line-2.padding-horizontal-sm.margin-top-md
-                          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
-        li.col-12
-          .swiper-container
-            .swiper-button-prev
-            .swiper-button-next
-            .swiper-wrapper
-              .swiper-slide Slide 1
-              .swiper-slide Slide 2
-              .swiper-slide Slide 3
-              .swiper-slide Slide 4
-              .swiper-slide Slide 5
-              .swiper-slide Slide 6
-              .swiper-slide Slide 7
-              .swiper-slide Slide 8
-              .swiper-slide Slide 9
-              .swiper-slide Slide 10
-            .swiper-pagination
-      .background-primary.height-lg
-      ul
-        li.color-graylight gray light
-        li.color-graymedium gray medium
-        li.color-graydark gray dark
-      ul
-        li.icon.icon-youtube
-        li.icon.icon-facebook
-        li.icon.icon-instagram
-        li.icon.icon-twitter
-        li.icon.icon-whatsapp
-        li.icon.icon-arrow-left
-        li.icon.icon-arrow-right
-        li.icon.icon-arrow-drop-down
-        li.icon.icon-arrow-back
-        li.icon.icon-arrow-forward
-        li.icon.icon-arrow-back-ios
-        li.icon.icon-arrow-forward-ios
-        li.icon.icon-arrow-left-alt
-        li.icon.icon-arrow-right-alt
-        li.icon.icon-arrow-down-keyboard
+						li
+							.relative
+								a(href="#0").full-link
+								.row.small
+									.col-6
+										.media-wrapper
+											img(src='https://source.unsplash.com/random', alt='')
+									.col-6
+										div
+											h3.line-camp.line-2
+											| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi eaque maxime dolore
+									
+				li.col-4.col-md-12
+					ul.column.margin-bottom
+						li
+							| Pagination
+						li
+							ul.pagination.flex.middle.center.space-horizontal-sm.color-white
+								li.multiple
+									a(href="#0").block.background-primary.text-center.radius-circle
+										i.icon.icon-arrow-back-ios.font-size-10
+										i.icon.icon-arrow-back-ios.font-size-10
+								li
+									a(href="#0").block.background-primary.text-center.radius-circle
+										i.icon.icon-arrow-back-ios.font-size-10
+								li
+									a(href="#0").block.background-primary.text-center.active.radius-circle 1
+								li
+									a(href="#0").block.background-primary.text-center.active.radius-circle 2
+								li.text-center.divider.radius-circle
+									| ...
+								li
+									a(href="#0").block.background-primary.text-center.radius-circle 3
+								li.multiple
+									a(href="#0").block.background-primary.text-center.radius-circle
+										i.icon.icon-arrow-forward-ios.font-size-10
+										i.icon.icon-arrow-forward-ios.font-size-10
+								li
+									a(href="#0").block.background-primary.text-center.radius-circle
+										i.icon.icon-arrow-forward-ios.font-size-10
+
+						li
+							| button
+						li
+							a(href="#0").flex
+								.button.radius-sm.flex.middle.background-primary.color-white
+									i.icon.icon-arrow-forward-ios.margin-right-sm
+									span Button
+
+						li dropdown
+						li
+							ul
+								li.dropdown.inline-block.cursor-pointer
+									span.line-height-lg Dropdown
+									ul.dropdown-select.absolute.display-none.background-white.shadow.padding-vertical-sm
+										li.dropdown-item
+											a(href="#0").line-height-lg.padding-horizontal-md.block Select-1
+										li.dropdown-item
+											a(href="#0").line-height-lg.padding-horizontal-md.block Select-2
+										li.dropdown-item
+											a(href="#0").line-height-lg.padding-horizontal-md.block Select-2
+										li.dropdown-item
+											a(href="#0").line-height-lg.padding-horizontal-md.block Select-2
+										li.dropdown-item
+											a(href="#0").line-height-lg.padding-horizontal-md.block Select-2
+										li.dropdown-item
+											span.line-height-lg.padding-horizontal-md.block Select-2
+						li.flex
+							input#styled-checkbox-1.styled-checkbox(type='checkbox', value='value1')
+							label(for='styled-checkbox-1') Checkbox
+						li.flex
+							input#styled-checkbox-2.styled-checkbox(type='checkbox', value='value2', checked='')
+							label(for='styled-checkbox-2') CSS Only
+						li.flex
+							input#styled-checkbox-3.styled-checkbox(type='checkbox', value='value3', disabled='')
+							label(for='styled-checkbox-3') A disabled checkbox
+						li.flex
+							input#styled-checkbox-4.styled-checkbox(type='checkbox', value='value4')
+							label(for='styled-checkbox-4') Fourth option
+
+						li.flex
+							input#styled-radio-1.styled-checkbox.radio(type='radio', name="radio", value='value1')
+							label(for='styled-radio-1') Radio
+						li.flex
+							input#styled-radio-2.styled-checkbox.radio(type='radio', name="radio", value='value2', checked='')
+							label(for='styled-radio-2') CSS Only
+						li.flex
+							input#styled-radio-3.styled-checkbox.radio(type='radio', name="radio", value='value3', disabled='')
+							label(for='styled-radio-3') A disabled radio
+						li.flex
+							input#styled-radio-4.styled-checkbox.radio(type='radio', name="radio", value='value4')
+							label(for='styled-radio-4') Fourth option
+
+				li.col-12
+					ul.row.margin
+						li.col-12
+							.height-sm
+								| layout-1
+						li.col-4.col-md-12
+							ul.column.margin-bottom
+								li
+									.shadow
+										.column
+											div(style="height:400px;background-image:url('https://source.unsplash.com/random')").cover
+											div(style='height:100px;')
+												h3.line-camp.line-2.padding-md
+													| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
+								li
+									.shadow
+										.column
+											div(style="height:400px;background-image:url('https://source.unsplash.com/random')").cover
+											div(style='height:100px;')
+												h3.line-camp.line-2.padding-md
+													| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
+						li.col-4.col-md-12
+							.shadow
+								.column
+									div(style="height:912px;background-image:url('https://source.unsplash.com/random')").cover
+									div(style='height:100px;')
+										h3.line-camp.line-2.padding-md
+											| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
+						li.col-4.col-md-12
+							ul.column.margin-bottom
+								li
+									.shadow
+										.column
+											div(style="height:400px;background-image:url('https://source.unsplash.com/random')").cover
+											div(style='height:100px;')
+												h3.line-camp.line-2.padding-md
+													| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
+								li
+									.shadow
+										.column
+											div(style="height:400px;background-image:url('https://source.unsplash.com/random')").cover
+											div(style='height:100px;')
+												h3.line-camp.line-2.padding-md
+													| Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore, tenetur animi
+				li.col-12
+					.slider.swiper-container
+						.swiper-button-prev
+						.swiper-button-next
+						.swiper-wrapper
+							.swiper-slide Slide 1
+							.swiper-slide Slide 2
+							.swiper-slide Slide 3
+							.swiper-slide Slide 4
+							.swiper-slide Slide 5
+							.swiper-slide Slide 6
+							.swiper-slide Slide 7
+							.swiper-slide Slide 8
+							.swiper-slide Slide 9
+							.swiper-slide Slide 10
+						.div
+							.swiper-pagination.flex.height-sm
+						.slider-pagination
+							ul.flex.between
+								li
+									a(target='_blank' href='') 1
+								li
+									a(target='_blank' href='') 2
+								li
+									a(target='_blank' href='') 3
+								li
+									a(target='_blank' href='') 4
+								li
+									a(target='_blank' href='') 5
+								li
+									a(target='_blank' href='') 6
+								li
+									a(target='_blank' href='') 7
+								li
+									a(target='_blank' href='') 8
+								li
+									a(target='_blank' href='') 9
+								li
+									a(target='_blank' href='') 10
+								li
+									a(target='_blank' href='') 11
+								li
+									a(target='_blank' href='') 12
+								li
+									a(target='_blank' href='') 13
+								li
+									a(target='_blank' href='') 14
+								li
+									a(target='_blank' href='') 15
+						.slider-arrow.color-white
+							i.icon.icon-arrow-back-ios.cursor-pointer.absolute.padding-sm.font-size-24.center-vertical
+							i.icon.icon-arrow-forward-ios.right-0.cursor-pointer.absolute.padding-sm.font-size-24.center-vertical
 
 
-  .popup
-    input#popup(type='checkbox', hidden='')
-    label.display-none.overlay.cursor-pointer.fixed(for='popup')
-    .display-none.popup-wrapper.absolute.background-white.radius-md
-      label.popup-close.absolute.color-white.cursor-pointer(for='popup') Close
-      .wrapper
-        img.responsive-image(src='https://source.unsplash.com/random', alt='')
+			.background-primary.height-lg
+			ul.space-vertical-sm.margin-bottom-md
+				li.color-gray-light gray light
+				li.color-gray-medium gray medium
+				li.color-gray-dark gray dark
+			ul.flex.space-horizontal-sm.margin-bottom-md
+				li.icon.icon-youtube
+				li.icon.icon-facebook
+				li.icon.icon-instagram
+				li.icon.icon-twitter
+				li.icon.icon-whatsapp
+				li.icon.icon-arrow-left
+				li.icon.icon-arrow-right
+				li.icon.icon-arrow-drop-down
+				li.icon.icon-arrow-back
+				li.icon.icon-arrow-forward
+				li.icon.icon-arrow-back-ios
+				li.icon.icon-arrow-forward-ios
+				li.icon.icon-arrow-left-alt
+				li.icon.icon-arrow-right-alt
+				li.icon.icon-arrow-down-keyboard
+
+			.margin-bottom-lg
+				ul.flex.space-horizontal-md.mb-column.mb-space-vertical-md.mb-space-horizontal-0
+					-for(var x=0; x<10; x++)
+						li list#{x+1}
+
+			ul.flex.between.mb-column.mb-space-vertical-md
+				-for(var x=0; x<10; x++)
+					li list#{x+1}
+
+
+	.popup
+		input#popup(type='checkbox', hidden='')
+		label.display-none.overlay.cursor-pointer.fixed(for='popup')
+		.display-none.popup-wrapper.absolute.background-white.radius-md
+			label.popup-close.absolute.color-white.cursor-pointer(for='popup') Close
+			.wrapper
+				img.responsive-image(src='https://source.unsplash.com/random', alt='')
 
 block css
-  style.
-    .swiper-slide {
-    background: #f1f1f1;
-    color: #000;
-    text-align: center;
-    line-height: 300px;
-    }
+	style.
+		.swiper-slide {
+		background: #ddd;
+		color: #000;
+		text-align: center;
+		line-height: 300px;
+		}
+		.swiper-pagination{
+			margin:0 -.4rem;
+		}
+		.swiper-pagination-bullet{
+			width: .8rem;
+			height: .8rem;
+			background-color: #ddd;
+			border-radius: 50%;
+			margin: 0 .4rem;
+		}
+		.swiper-pagination-bullet-active{
+			background-color: #000;
+		}
 block js 
-  script.
-      var disableBodyScroll = bodyScrollLock.disableBodyScroll;
-      var enableBodyScroll = bodyScrollLock.enableBodyScroll;
-      var menuElement = document.querySelector("#mobileMenuList");
+	script.
+			var disableBodyScroll = bodyScrollLock.disableBodyScroll;
+			var enableBodyScroll = bodyScrollLock.enableBodyScroll;
+			var menuElement = document.querySelector("#mobileMenuList");
 
-      var swiper = new Swiper({
-      el: '.swiper-container',
-      spaceBetween: 50,
-      slidesPerView: 1,
-      centeredSlides: false,
-      pagination: {
-      el: '.swiper-pagination',
-      },
-      navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-      },
-      });
+			var swiper = new Swiper({
+				el: '.slider.swiper-container',
+				followFinger: false,
+				simulateTouch: false,
+				loop:true,
+				slidesPerView: 1,
+				 pagination: {
+					el: '.swiper-pagination',
+					clickable: true
+				},
+				navigation: {
+				nextEl: '.icon-arrow-forward-ios',
+				prevEl: '.icon-arrow-back-ios',
+				autoplay: {
+					delay: 5000
+				}
+				},
+				on: {
+					slideChangeTransitionEnd: function (swiper) {
+						var activeIndex = $('.slider .swiper-slide-active').data("swiper-slide-index");
+						$('.slider .slider-pagination li').removeClass("active");
+						$('.slider .slider-pagination li').eq(activeIndex).addClass("active");
+					}
+				}
+			});
+
+			$('.slider .slider-pagination li').hover(function () {
+				swiper.slideTo($(this).index() + 1);
+			});
