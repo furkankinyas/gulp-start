@@ -549,6 +549,14 @@ label {
   opacity: 0;
 }
 
+.z-index-front{
+  z-index: 11;
+}
+
+.z-index-back{
+  z-index: -1;
+}
+
 .centerer {
   position: absolute;
   top: 50%;
