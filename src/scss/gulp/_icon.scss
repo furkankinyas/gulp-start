@@ -51,44 +51,47 @@
     @if $filename==arrow-right {
       $char: "\E00A";
     }
-    @if $filename==circle {
+    @if $filename==arrow-up-keyboard {
       $char: "\E00B";
     }
-    @if $filename==close {
+    @if $filename==circle {
       $char: "\E00C";
     }
-    @if $filename==email {
+    @if $filename==close {
       $char: "\E00D";
     }
-    @if $filename==facebook {
+    @if $filename==email {
       $char: "\E00E";
     }
-    @if $filename==instagram {
+    @if $filename==facebook {
       $char: "\E00F";
     }
-    @if $filename==menu {
+    @if $filename==instagram {
       $char: "\E010";
     }
-    @if $filename==pinterest {
+    @if $filename==menu {
       $char: "\E011";
     }
-    @if $filename==play {
+    @if $filename==pinterest {
       $char: "\E012";
     }
-    @if $filename==search {
+    @if $filename==play {
       $char: "\E013";
     }
-    @if $filename==spotify {
+    @if $filename==search {
       $char: "\E014";
     }
-    @if $filename==twitter {
+    @if $filename==spotify {
       $char: "\E015";
     }
-    @if $filename==whatsapp {
+    @if $filename==twitter {
       $char: "\E016";
     }
-    @if $filename==youtube {
+    @if $filename==whatsapp {
       $char: "\E017";
+    }
+    @if $filename==youtube {
+      $char: "\E018";
     }
     @return $char;
 }
@@ -128,6 +131,9 @@
   }
   .icon-arrow-right {
     @include icon(arrow-right);
+  }
+  .icon-arrow-up-keyboard {
+    @include icon(arrow-up-keyboard);
   }
   .icon-circle {
     @include icon(circle);
