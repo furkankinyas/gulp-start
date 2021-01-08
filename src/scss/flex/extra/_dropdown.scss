@@ -1,14 +1,16 @@
 .dropdown {
   z-index: 99999;
   &:hover {
-    display: block;
+    .dropdown-select {
+      display: block;
+    }
   }
 }
 
 .dropdown-select {
   background-color: $white;
   max-height: 24rem;
-  min-width: 12rem;
+  min-width: 16rem;
   overflow-y: auto;
   &::-webkit-scrollbar {
     width: 7px;

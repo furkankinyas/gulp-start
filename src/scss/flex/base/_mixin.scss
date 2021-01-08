@@ -1,20 +1,29 @@
-// @include placeholder {
-//   color: green;
+// .foo {
+//   @include placeholder {
+//     color: green;
+//   }
 // }
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
 @mixin placeholder {
-  ::-webkit-input-placeholder {
-    @content
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
   }
 
-  :-moz-placeholder {
-    @content
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
   }
 
-  ::-moz-placeholder {
-    @content
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
   }
 
-  :-ms-input-placeholder {
-    @content
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
   }
 }

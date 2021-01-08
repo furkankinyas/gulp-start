@@ -1,14 +1,18 @@
-.scroll-main {
-  overflow: hidden;
-  width: 100%;
-}
+@import '../base/variables';
 
-.scroll-wrapper {
-  overflow-x: scroll;
-  width: 100%;
-  -webkit-overflow-scrolling: touch;
-
-  >div {
-    min-width: 200vw;
+@media(max-width:$md){
+  .scroll-main {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .scroll-wrapper {
+    overflow-x: scroll;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  
+    >div {
+      min-width: $container/1.2;
+    }
   }
 }
