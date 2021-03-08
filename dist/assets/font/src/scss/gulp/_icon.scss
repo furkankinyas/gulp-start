@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "icon";
+  src: url('/assets/font/icon.eot?v='+random(1000000));
+  src: url('/assets/font/icon.eot?#iefix'+random(1000000)) format('eot'), url('/assets/font/icon.woff2?v='+random(1000000)) format('woff2'), url('/assets/font/icon.woff?v='+random(1000000)) format('woff'), url('/assets/font/icon.ttf?v='+random(1000000)) format('truetype'), url('/assets/font/icon.svg#icon'+random(1000000)) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: "icon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function icon-char($filename) {
+  $char: "";
+  @if $filename==arrow-back-ios {
+      $char: "\E001";
+    }
+    @if $filename==arrow-back {
+      $char: "\E002";
+    }
+    @if $filename==arrow-down-keyboard {
+      $char: "\E003";
+    }
+    @if $filename==arrow-drop-down {
+      $char: "\E004";
+    }
+    @if $filename==arrow-forward-ios {
+      $char: "\E005";
+    }
+    @if $filename==arrow-forward {
+      $char: "\E006";
+    }
+    @if $filename==arrow-left-alt {
+      $char: "\E007";
+    }
+    @if $filename==arrow-left {
+      $char: "\E008";
+    }
+    @if $filename==arrow-right-alt {
+      $char: "\E009";
+    }
+    @if $filename==arrow-right {
+      $char: "\E00A";
+    }
+    @if $filename==arrow-up-keyboard {
+      $char: "\E00B";
+    }
+    @if $filename==circle {
+      $char: "\E00C";
+    }
+    @if $filename==close {
+      $char: "\E00D";
+    }
+    @if $filename==email {
+      $char: "\E00E";
+    }
+    @if $filename==facebook {
+      $char: "\E00F";
+    }
+    @if $filename==instagram {
+      $char: "\E010";
+    }
+    @if $filename==menu {
+      $char: "\E011";
+    }
+    @if $filename==pinterest {
+      $char: "\E012";
+    }
+    @if $filename==play {
+      $char: "\E013";
+    }
+    @if $filename==search {
+      $char: "\E014";
+    }
+    @if $filename==spotify {
+      $char: "\E015";
+    }
+    @if $filename==twitter {
+      $char: "\E016";
+    }
+    @if $filename==whatsapp {
+      $char: "\E017";
+    }
+    @if $filename==youtube {
+      $char: "\E018";
+    }
+    @return $char;
+}
+
+@mixin icon($filename) {
+  &:before {
+    content: icon-char($filename);
+  }
+}
+
+.icon-arrow-back-ios {
+    @include icon(arrow-back-ios);
+  }
+  .icon-arrow-back {
+    @include icon(arrow-back);
+  }
+  .icon-arrow-down-keyboard {
+    @include icon(arrow-down-keyboard);
+  }
+  .icon-arrow-drop-down {
+    @include icon(arrow-drop-down);
+  }
+  .icon-arrow-forward-ios {
+    @include icon(arrow-forward-ios);
+  }
+  .icon-arrow-forward {
+    @include icon(arrow-forward);
+  }
+  .icon-arrow-left-alt {
+    @include icon(arrow-left-alt);
+  }
+  .icon-arrow-left {
+    @include icon(arrow-left);
+  }
+  .icon-arrow-right-alt {
+    @include icon(arrow-right-alt);
+  }
+  .icon-arrow-right {
+    @include icon(arrow-right);
+  }
+  .icon-arrow-up-keyboard {
+    @include icon(arrow-up-keyboard);
+  }
+  .icon-circle {
+    @include icon(circle);
+  }
+  .icon-close {
+    @include icon(close);
+  }
+  .icon-email {
+    @include icon(email);
+  }
+  .icon-facebook {
+    @include icon(facebook);
+  }
+  .icon-instagram {
+    @include icon(instagram);
+  }
+  .icon-menu {
+    @include icon(menu);
+  }
+  .icon-pinterest {
+    @include icon(pinterest);
+  }
+  .icon-play {
+    @include icon(play);
+  }
+  .icon-search {
+    @include icon(search);
+  }
+  .icon-spotify {
+    @include icon(spotify);
+  }
+  .icon-twitter {
+    @include icon(twitter);
+  }
+  .icon-whatsapp {
+    @include icon(whatsapp);
+  }
+  .icon-youtube {
+    @include icon(youtube);
+  }
+  

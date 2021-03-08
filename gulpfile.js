@@ -42,8 +42,8 @@ function sprite() {
     .pipe(spritesmith({
       imgName: 'sprite.png',
       cssName: 'sprite.css',
-      imgPath: '../../img/sprite.png?v=' + Date.now(),
-      retinaImgPath: '../../img/sprite@2x.png?v=' + Date.now(),
+      imgPath: '/assets/img/sprite.png?v=' + Date.now(),
+      retinaImgPath: '/assets/img/sprite@2x.png?v=' + Date.now(),
       retinaSrcFilter: 'src/img/sprite/*@2x.png',
       retinaImgName: 'sprite@2x.png',
       padding: 5
@@ -64,9 +64,9 @@ function icon() {
       // template path
       path: 'src/scss/gulp/_icon-template.scss',
       // will generate scss
-      targetPath: '../../../src/scss/gulp/_icon.scss',
+      targetPath: 'src/scss/gulp/_icon.scss',
       // template font path
-      fontPath: '../font/'
+      fontPath: '/assets/font/'
     }))
     .pipe(iconfont({
       fontName: 'icon',
@@ -132,7 +132,7 @@ function scssAmp() {
       }))
       .pipe(cssmin())
       .pipe(replace(/@charset "UTF-8";/g, ""))
-      .pipe(replace(/..\/img\//g, "/assets/img/"))
+      // .pipe(replace(/..\/img\//g, "/assets/img/"))
       .pipe(replace(/!important/g, ""))
       .pipe(
         size({
