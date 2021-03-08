@@ -50,7 +50,7 @@ function sprite() {
     }));
   var imgStream = spriteData.img
     .pipe(buffer())
-    .pipe(imagemin([imagemin.optipng()]))
+    .pipe(imagemin([imagemin.optipng({optimizationLevel: 5})]))
     .pipe(dest('dist/assets/img'));
   var cssStream = spriteData.css
     .pipe(dest('src/scss/gulp/'))
