@@ -1,0 +1,40 @@
+//- vars
+- var bodyClass = ''; 
+block vars
+
+//- layout.jade
+doctype html
+html(lang="tr")
+  head
+    //- https://github.com/joshbuchea/HEAD
+    //- base(href="/") 
+    link(rel="preload", href="/assets/font/icon.woff2", as="font", type="font/woff2", crossorigin)
+    link(rel="preload", as="image", href="/assets/img/sprite.png")
+    link(rel="preconnect", href="https://img3.aksam.com.tr/" crossorigin)
+    
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    title Title 
+    meta(name="description" content="")    
+    link(rel="icon" type="image/png" href="assets/img/favicon.png")
+    link(rel="apple-touch-icon" href="assets/img/apple-touch-icon.png")
+    link(rel="stylesheet", href="assets/css/main.css")
+    block css 
+
+  body(class=bodyClass)
+
+    //- content
+    div.shell
+      //- header
+      include ../partial/header.pug   
+      //- body 
+      block content
+      //- footer
+      include ../partial/footer.pug
+
+    //- assets 
+    script(src="assets/js/min/scripts-min.js")
+    block js
+
+    
