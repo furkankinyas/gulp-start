@@ -1,7 +1,6 @@
 @font-face {
   font-family: "<%= fontName %>";
-  src: url('<%= fontPath %><%= fontName %>.eot?v='+random(1000000));
-  src: url('<%= fontPath %><%= fontName %>.eot?#iefix'+random(1000000)) format('eot'), url('<%= fontPath %><%= fontName %>.woff2?v='+random(1000000)) format('woff2'), url('<%= fontPath %><%= fontName %>.woff?v='+random(1000000)) format('woff'), url('<%= fontPath %><%= fontName %>.ttf?v='+random(1000000)) format('truetype'), url('<%= fontPath %><%= fontName %>.svg#icon'+random(1000000)) format('svg');
+  src: url('<%= fontPath %><%= fontName %>.woff2?v='+random(10000)) format('woff2');
   font-weight: normal;
   font-style: normal;
 }

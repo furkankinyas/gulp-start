@@ -17,13 +17,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 <i class="icon icon-home"></i>
 */
 .icon-test2 {
-  background-image: url(/assets/img/sprite.png?v=1615204037601);
+  background-image: url(/assets/img/sprite.png?v=5630);
   background-position: 0px 0px;
   width: 60px;
   height: 60px;
 }
 .icon-test3 {
-  background-image: url(/assets/img/sprite.png?v=1615204037601);
+  background-image: url(/assets/img/sprite.png?v=5630);
   background-position: -65px 0px;
   width: 32px;
   height: 32px;
@@ -32,11 +32,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 @media (-webkit-min-device-pixel-ratio: 2),
        (min-resolution: 192dpi) {
   .icon-test2 {
-    background-image: url(/assets/img/sprite@2x.png?v=1615204037601);
+    background-image: url(/assets/img/sprite@2x.png?v=5630);
     background-size: 97px 60px;
   }
   .icon-test3 {
-    background-image: url(/assets/img/sprite@2x.png?v=1615204037601);
+    background-image: url(/assets/img/sprite@2x.png?v=5630);
     background-size: 97px 60px;
   }
 }
