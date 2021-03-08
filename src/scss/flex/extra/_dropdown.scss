@@ -8,6 +8,7 @@
 }
 
 .dropdown-select {
+  z-index: 99999;
   background-color: $white;
   max-height: 24rem;
   min-width: 16rem;
