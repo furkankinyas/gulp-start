@@ -95,7 +95,7 @@ function scss() {
     }))
     .pipe(sass())
     .pipe(purgecss({
-      content: ['src/views/**/*.pug', 'src/js/*.js']
+      content: ['dist/html/*.html']
     }))
     .pipe(cssmin())
     .pipe(size({
@@ -128,12 +128,11 @@ function scssAmp() {
       )
       .pipe(sass())
       .pipe(purgecss({
-        content: ['src/amp-views/*/**.pug']
+        content: ['dist/amphtml/amp.html']
       }))
       .pipe(cssmin())
       .pipe(replace(/@charset "UTF-8";/g, ""))
       .pipe(replace(/..\/img\//g, "/assets/img/"))
-      .pipe(replace(/..\/font\//g, "/assets/font/"))
       .pipe(replace(/!important/g, ""))
       .pipe(
         size({
