@@ -89,7 +89,7 @@ function scss() {
     this.emit('end');
   };
 
-  return src('src/scss/**/*.scss')
+  return src(['src/scss/**/*.scss','!src/scss/amp.scss'])
     .pipe(plumber({
       errorHandler: onError
     }))
@@ -132,8 +132,8 @@ function scssAmp() {
       }))
       .pipe(cssmin())
       .pipe(replace(/@charset "UTF-8";/g, ""))
-      // .pipe(replace(/..\/img\//g, "https://assets.turkmedya.com.tr/platin/assets/img/"))
-      // .pipe(replace(/..\/font\//g, "https://assets.turkmedya.com.tr/platin/assets/font/"))
+      .pipe(replace(/..\/img\//g, "/assets/img/"))
+      .pipe(replace(/..\/font\//g, "/assets/font/"))
       .pipe(replace(/!important/g, ""))
       .pipe(
         size({
@@ -221,6 +221,7 @@ function live() {
   watch('src/js/single/*.js', series(singlejs));
   watch('src/js/plugin/*.js', series(pluginjs));
   watch('src/views/**/*.pug', series(pughtml));
+  watch('src/views-amp/**/*.pug', series(pughtml));
   watch('src/icon/*.svg', series(icon));
   watch('src/img/sprite/*.png', series(sprite));
   watch('src/img/*', series(imgmin));

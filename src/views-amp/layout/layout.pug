@@ -4,37 +4,35 @@ block vars
 
 //- layout.jade
 doctype html
-html(lang="tr")
-  head
-    //- https://github.com/joshbuchea/HEAD
-    //- base(href="/") 
-    link(rel="preload", href="/assets/font/icon.woff2", as="font", type="font/woff2", crossorigin)
-    link(rel="preload", as="image", href="/assets/img/sprite.png")
-    link(rel="preconnect", href="https://img3.aksam.com.tr/" crossorigin)
-    
-    meta(charset="utf-8")
-    meta(http-equiv="x-ua-compatible" content="ie=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
-    title Title 
-    meta(name="description" content="")    
-    link(rel="icon" type="image/png" href="assets/img/favicon.png")
-    link(rel="apple-touch-icon" href="assets/img/apple-touch-icon.png")
-    link(rel="stylesheet", href="assets/css/main.css")
-    block css 
+html(lang="tr" amp)
+	head
+		//- https://github.com/joshbuchea/HEAD
+		//- base(href="/") 
+		meta(charset="utf-8")
+		title Lorem Ipsum
+		link(rel="canonical", href="http://example.ampproject.org/article-metadata.html")
+		meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
+		style(amp-custom)
+			include ../../../dist/assets/css/amp.css
 
-  body(class=bodyClass)
+		.
+			<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
-    //- content
-    div.shell
-      //- header
-      include ../partial/header.pug   
-      //- body 
-      block content
-      //- footer
-      include ../partial/footer.pug
+		block css 
 
-    //- assets 
-    script(src="assets/js/min/scripts-min.js")
-    block js
+		script(async, src="https://cdn.ampproject.org/v0.js")
+		script(async, custom-element="amp-analytics", src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js")
+		script(async, custom-element="amp-video", src="https://cdn.ampproject.org/v0/amp-video-0.1.js")
+		script(async, custom-element="amp-ad", src="https://cdn.ampproject.org/v0/amp-ad-0.1.js")
 
-    
+	body(class=bodyClass)
+
+		//- content
+		div.shell
+			//- header
+			include ../partial/header.pug   
+			//- body 
+			block content
+			//- footer
+			include ../partial/footer.pug
+		
