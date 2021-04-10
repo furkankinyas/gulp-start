@@ -62,7 +62,7 @@
     max-width: $container;
   }
 
-  @media (max-width: $lg) {
+  @media (max-width: $media-lg) {
     .col-lg-4 {
       width: (4 * (100%/12));
     }
@@ -80,7 +80,7 @@
     }
   }
 
-  @media (max-width: $md) {
+  @media (max-width: $media-md) {
     .col-md-4 {
       width: (4 * (100%/12));
     }
@@ -162,7 +162,7 @@
   flex: 1 0;
 }
 
-@media (max-width: $lg) {
+@media (max-width: $media-lg) {
   .mb-row {
     flex-direction: row;
   }
