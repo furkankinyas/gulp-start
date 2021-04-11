@@ -14,12 +14,15 @@
 }
 
 .col,
+.col-2,
 .col-3,
 .col-4,
 .col-5,
 .col-6,
 .col-7,
 .col-8,
+.col-9,
+.col-10,
 .col-12 {
   padding-left: $gutter-width;
   padding-right: $gutter-width;
@@ -27,6 +30,10 @@
 
 .col {
   flex: 1 0;
+}
+
+.col-2 {
+  width: (2 * (100%/12));
 }
 
 .col-3 {
@@ -51,6 +58,14 @@
 
 .col-8 {
   width: (8 * (100%/12));
+}
+
+.col-9 {
+  width: (9 * (100%/12));
+}
+
+.col-10 {
+  width: (10 * (100%/12));
 }
 
 .col-12 {
