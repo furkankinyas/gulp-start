@@ -10,12 +10,22 @@ label {
 
 .border-bottom {
   > *:not(:last-child) {
-    border-bottom: 0.1rem solid $graylight;
+    border-width: 0 0 0.1rem 0;
+    border-style: solid;
+    border-color: $graylight;
     padding-bottom: $gutter;
     margin-bottom: $gutter;
   }
   > *:first-child {
-    border-bottom: 0.1rem solid $graylight;
+    border-width: 0 0 0.1rem 0;
+    border-style: solid;
+    border-color: $graylight;
+  }
+  &.border-small {
+    > * {
+      padding-bottom: $gutter/2;
+      margin-bottom: $gutter/2;
+    }
   }
 }
 
@@ -95,11 +105,11 @@ label {
   opacity: 0;
 }
 
-.z-index-front{
+.z-index-front {
   z-index: 11;
 }
 
-.z-index-back{
+.z-index-back {
   z-index: -1;
 }
 
@@ -240,6 +250,6 @@ label {
   overflow: hidden;
 }
 
-.word-break{
+.word-break {
   word-break: break-all;
 }
